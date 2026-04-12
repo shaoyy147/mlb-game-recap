@@ -14,6 +14,13 @@
             border-color: #8b1e2d;
             color: #8b1e2d;
         }
+        .player-name-ref {
+            color: #6b7280;
+            text-decoration-line: underline;
+            text-decoration-style: dashed;
+            text-decoration-color: #9ca3af;
+            text-underline-offset: 0.14em;
+        }
     </style>
 </head>
 <body class="min-h-screen bg-gray-50 py-8 font-sans text-gray-900">
@@ -110,10 +117,10 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">{{ play.event }}</span>
-                        {% if play.description_lines and play.description_lines|length > 1 %}
+                        {% if play.description_lines_html and play.description_lines_html|length > 1 %}
                         <div class="text-[17px] leading-snug">
-                            {% for line in play.description_lines %}
-                            <p>{{ line }}</p>
+                            {% for line in play.description_lines_html %}
+                            <p>{{ line | safe }}</p>
                             {% endfor %}
                             {% if play.out_text %}
                             <p><span class="font-bold">{{ play.out_text }}</span></p>
@@ -121,7 +128,7 @@
                         </div>
                         {% else %}
                         <p class="text-[17px] leading-snug">
-                            {{ play.description }}
+                            {{ play.description_html | safe }}
                             {% if play.out_text %}
                             <span class="font-bold">{{ play.out_text }}</span>
                             {% endif %}
@@ -140,10 +147,10 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">{{ play.event }}</span>
-                        {% if play.description_lines and play.description_lines|length > 1 %}
+                        {% if play.description_lines_html and play.description_lines_html|length > 1 %}
                         <div class="text-[17px] leading-snug">
-                            {% for line in play.description_lines %}
-                            <p>{{ line }}</p>
+                            {% for line in play.description_lines_html %}
+                            <p>{{ line | safe }}</p>
                             {% endfor %}
                             {% if play.out_text %}
                             <p><span class="font-bold">{{ play.out_text }}</span></p>
@@ -151,7 +158,7 @@
                         </div>
                         {% else %}
                         <p class="text-[17px] leading-snug">
-                            {{ play.description }}
+                            {{ play.description_html | safe }}
                             {% if play.out_text %}
                             <span class="font-bold">{{ play.out_text }}</span>
                             {% endif %}
@@ -169,10 +176,10 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">{{ play.event }}</span>
-                        {% if play.description_lines and play.description_lines|length > 1 %}
+                        {% if play.description_lines_html and play.description_lines_html|length > 1 %}
                         <div class="text-[17px] leading-snug">
-                            {% for line in play.description_lines %}
-                            <p>{{ line }}</p>
+                            {% for line in play.description_lines_html %}
+                            <p>{{ line | safe }}</p>
                             {% endfor %}
                             {% if play.out_text %}
                             <p><span class="font-bold">{{ play.out_text }}</span></p>
@@ -180,7 +187,7 @@
                         </div>
                         {% else %}
                         <p class="text-[17px] leading-snug">
-                            {{ play.description }}
+                            {{ play.description_html | safe }}
                             {% if play.out_text %}
                             <span class="font-bold">{{ play.out_text }}</span>
                             {% endif %}
@@ -218,7 +225,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            {{ play.description }}
+                            {{ play.description_html | safe }}
                             {% if play.out_text %}
                             <span class="font-bold">{{ play.out_text }}</span>
                             {% endif %}

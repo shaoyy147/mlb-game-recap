@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import re
 from pathlib import Path
@@ -322,6 +323,54 @@ def build_event_avatar_text(player_name: str | None, event_label: str) -> str:
     return event_label[:2].upper()
 
 
+def normalize_name_variants(full_name: str) -> set[str]:
+    """为一个球员名生成可匹配的变体。"""
+    variants = {full_name.strip()}
+    collapsed = full_name.replace(".", "").strip()
+    if collapsed:
+        variants.add(collapsed)
+    return {variant for variant in variants if variant}
+
+
+def collect_player_names_from_play(play: dict) -> list[str]:
+    """从一个 play 中收集可能出现在描述文本里的球员全名。"""
+    names: set[str] = set()
+    matchup = play.get("matchup", {})
+
+    for key in ("batter", "pitcher", "postOnFirst", "postOnSecond", "postOnThird"):
+        full_name = matchup.get(key, {}).get("fullName")
+        if full_name:
+            names.update(normalize_name_variants(str(full_name)))
+
+    for runner_movement in play.get("runners", []):
+        full_name = runner_movement.get("details", {}).get("runner", {}).get("fullName")
+        if full_name:
+            names.update(normalize_name_variants(str(full_name)))
+
+    return sorted(names, key=len, reverse=True)
+
+
+def highlight_player_names(text: str, player_names: list[str]) -> str:
+    """给描述中的球员名加上浅灰色虚线下划线样式。"""
+    escaped_text = html.escape(text)
+    if not escaped_text or not player_names:
+        return escaped_text
+
+    replacements: list[tuple[re.Pattern[str], str]] = []
+    for player_name in player_names:
+        escaped_name = html.escape(player_name)
+        if not escaped_name:
+            continue
+        pattern = re.compile(rf"(?<![\w>]){re.escape(escaped_name)}(?![\w<])")
+        replacement = f'<span class="player-name-ref">{escaped_name}</span>'
+        replacements.append((pattern, replacement))
+
+    highlighted = escaped_text
+    for pattern, replacement in replacements:
+        highlighted = pattern.sub(replacement, highlighted)
+    return highlighted
+
+
 def normalize_action_event_label(event_type: str | None, fallback_event: str | None) -> str:
     """把 action 事件名转换成更稳定的展示文案。"""
     if event_type == "pitching_substitution":
@@ -415,7 +464,7 @@ def build_score_update(play: dict, previous_play: dict | None) -> dict | None:
     }
 
 
-def build_play_view(play: dict, previous_play: dict | None) -> dict:
+def build_play_view(play: dict, previous_play: dict | None, player_names: list[str]) -> dict:
     """把原始 play 转成模板可直接消费的结构。"""
     result = play.get("result", {})
     batter = play.get("matchup", {}).get("batter", {})
@@ -433,6 +482,7 @@ def build_play_view(play: dict, previous_play: dict | None) -> dict:
     return {
         "event": result.get("event") or result.get("eventType") or "Unknown Event",
         "description": result.get("description") or "",
+        "description_html": highlight_player_names(result.get("description") or "", player_names),
         "avatar_text": build_avatar_text(play),
         "avatar_url": f"https://midfield.mlbstatic.com/v1/people/{batter_id}/spots/120" if batter_id else None,
         "avatar_alt": batter_name,
@@ -489,7 +539,7 @@ def is_redundant_runner_out_action(play: dict, event: dict) -> bool:
     return False
 
 
-def build_action_view(event: dict) -> dict:
+def build_action_view(event: dict, player_names: list[str]) -> dict:
     """把补充事件转换成模板可消费的结构。"""
     details = event.get("details", {})
     player_name = None
@@ -531,10 +581,13 @@ def build_action_view(event: dict) -> dict:
     else:
         layout = "default"
 
+    description = details.get("description") or ""
     return {
         "event": event_label,
-        "description": details.get("description") or "",
-        "description_lines": [details.get("description") or ""],
+        "description": description,
+        "description_html": highlight_player_names(description, player_names),
+        "description_lines": [description],
+        "description_lines_html": [highlight_player_names(description, player_names)],
         "avatar_text": build_event_avatar_text(player_name, event_label),
         "avatar_url": None,
         "avatar_alt": event_label,
@@ -547,20 +600,25 @@ def build_action_view(event: dict) -> dict:
 def build_preceding_action_views(play: dict) -> list[dict]:
     """提取每个 at-bat 结果之前需要展示的补充事件。"""
     action_views: list[dict] = []
+    player_names = collect_player_names_from_play(play)
     for event in play.get("playEvents", []):
         if not should_include_action_event(event) or is_redundant_runner_out_action(play, event):
             continue
 
-        action_view = build_action_view(event)
+        action_view = build_action_view(event, player_names)
         if (
             action_views
             and action_views[-1].get("event") == "Defensive Switch"
             and action_view.get("event") == "Defensive Switch"
         ):
             previous_lines = action_views[-1].setdefault("description_lines", [action_views[-1].get("description", "")])
+            previous_lines_html = action_views[-1].setdefault("description_lines_html", [action_views[-1].get("description_html", "")])
             current_lines = action_view.get("description_lines") or [action_view.get("description", "")]
+            current_lines_html = action_view.get("description_lines_html") or [action_view.get("description_html", "")]
             previous_lines.extend(line for line in current_lines if line)
+            previous_lines_html.extend(line for line in current_lines_html if line)
             action_views[-1]["description"] = "\n".join(previous_lines)
+            action_views[-1]["description_html"] = "<br>".join(previous_lines_html)
             continue
 
         action_views.append(action_view)
@@ -575,9 +633,13 @@ def append_action_view(action_views: list[dict], action_view: dict) -> None:
         and action_view.get("event") == "Defensive Switch"
     ):
         previous_lines = action_views[-1].setdefault("description_lines", [action_views[-1].get("description", "")])
+        previous_lines_html = action_views[-1].setdefault("description_lines_html", [action_views[-1].get("description_html", "")])
         current_lines = action_view.get("description_lines") or [action_view.get("description", "")]
+        current_lines_html = action_view.get("description_lines_html") or [action_view.get("description_html", "")]
         previous_lines.extend(line for line in current_lines if line)
+        previous_lines_html.extend(line for line in current_lines_html if line)
         action_views[-1]["description"] = "\n".join(previous_lines)
+        action_views[-1]["description_html"] = "<br>".join(previous_lines_html)
         return
 
     action_views.append(action_view)
@@ -732,6 +794,7 @@ def build_sections(all_plays: list[dict]) -> list[dict]:
     game_state = {"outs": 0, "bases": empty_bases(), "away_score": 0, "home_score": 0}
 
     for play in all_plays:
+        player_names = collect_player_names_from_play(play)
         about = play.get("about", {})
         half_inning = about.get("halfInning", "")
         inning = int(about.get("inning", 0))
@@ -754,10 +817,10 @@ def build_sections(all_plays: list[dict]) -> list[dict]:
 
         for event in play.get("playEvents", []):
             if should_include_action_event(event) and not is_redundant_runner_out_action(play, event):
-                append_action_view(sections[-1]["plays"], build_action_view(event))
+                append_action_view(sections[-1]["plays"], build_action_view(event, player_names))
                 apply_runner_movements(game_state, get_action_runner_movements(play, event))
 
-        play_view = build_play_view(play, previous_play)
+        play_view = build_play_view(play, previous_play, player_names)
         play_view["base_out_state"] = build_base_out_state_view(clone_state(game_state))
         sections[-1]["plays"].append(play_view)
 
