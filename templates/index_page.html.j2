@@ -15,22 +15,29 @@
         </header>
 
         <section class="rounded-2xl bg-white p-6 shadow-sm">
-            {% if records %}
-            <div class="flex flex-col divide-y divide-gray-200">
-                {% for record in records %}
-                <a href="{{ record.html_path }}" class="flex flex-col gap-2 py-4 transition hover:bg-gray-50 first:pt-0 last:pb-0">
-                    <div class="flex items-start justify-between gap-4">
-                        <div class="min-w-0">
-                            <div class="text-lg font-bold">{{ record.away_label }} @ {{ record.home_label }}</div>
-                            <div class="text-sm text-gray-600">{{ record.official_date }}{% if record.venue_name %} · {{ record.venue_name }}{% endif %}</div>
-                            <div class="text-xs text-gray-500">{{ record.away_name }} at {{ record.home_name }}</div>
-                        </div>
-                        <div class="shrink-0 text-left text-xs text-gray-600">
-                            <div><span class="font-mono text-gray-500">{{ record.away_label }} SP:</span> <span class="text-sm font-bold text-gray-800">{{ record.away_starting_pitcher }}</span></div>
-                            <div><span class="font-mono text-gray-500">{{ record.home_label }} SP:</span> <span class="text-sm font-bold text-gray-800">{{ record.home_starting_pitcher }}</span></div>
-                        </div>
+            {% if grouped_records %}
+            <div class="flex flex-col gap-8">
+                {% for group in grouped_records %}
+                <div>
+                    <h2 class="mb-3 text-2xl font-medium tracking-tight text-gray-900">{{ group.official_date }}</h2>
+                    <div class="flex flex-col divide-y divide-gray-200">
+                        {% for record in group.records %}
+                        <a href="{{ record.html_path }}" class="flex flex-col gap-2 py-4 transition hover:bg-gray-50 first:pt-0 last:pb-0">
+                            <div class="flex items-start justify-between gap-4">
+                                <div class="min-w-0">
+                                    <div class="text-lg font-bold">{{ record.away_label }} @ {{ record.home_label }}</div>
+                                    <div class="text-sm text-gray-600">{{ record.official_date }}{% if record.venue_name %} · {{ record.venue_name }}{% else %} · Final{% endif %}</div>
+                                    <div class="text-xs text-gray-500">{{ record.away_name }} at {{ record.home_name }}</div>
+                                </div>
+                                <div class="shrink-0 text-left text-xs text-gray-600">
+                                    <div><span class="font-mono text-gray-500">{{ record.away_label }} SP:</span> <span class="text-sm font-bold text-gray-800">{{ record.away_starting_pitcher }}</span></div>
+                                    <div><span class="font-mono text-gray-500">{{ record.home_label }} SP:</span> <span class="text-sm font-bold text-gray-800">{{ record.home_starting_pitcher }}</span></div>
+                                </div>
+                            </div>
+                        </a>
+                        {% endfor %}
                     </div>
-                </a>
+                </div>
                 {% endfor %}
             </div>
             {% else %}

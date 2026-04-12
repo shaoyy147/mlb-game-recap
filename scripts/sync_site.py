@@ -62,6 +62,12 @@ class GameRecord:
         return f"{self.away_label} {self.away_score} - {self.home_score} {self.home_label}"
 
 
+@dataclass
+class GameDateGroup:
+    official_date: str
+    records: list[GameRecord]
+
+
 def load_existing_manifest() -> dict[int, GameRecord]:
     """读取已有比赛索引，作为增量同步依据。"""
     if not MANIFEST_PATH.exists():
@@ -229,7 +235,19 @@ def render_index(records: list[GameRecord]) -> None:
         autoescape=select_autoescape(["html", "xml"]),
     )
     template = env.get_template(INDEX_TEMPLATE.name)
-    html = template.render(records=records, generated_at=datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"))
+    grouped_records: list[GameDateGroup] = []
+    current_group: GameDateGroup | None = None
+    for record in records:
+        if current_group is None or current_group.official_date != record.official_date:
+            current_group = GameDateGroup(official_date=record.official_date, records=[])
+            grouped_records.append(current_group)
+        current_group.records.append(record)
+
+    html = template.render(
+        records=records,
+        grouped_records=grouped_records,
+        generated_at=datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
+    )
     (DOCS_DIR / "index.html").write_text(html, encoding="utf-8")
 
 
