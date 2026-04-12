@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 824696,
+    "official_date": "2026-04-12",
+    "game_datetime": "2026-04-12T18:20:00Z",
+    "away_label": "PIT",
+    "home_label": "CHC",
+    "away_name": "Pittsburgh Pirates",
+    "home_name": "Chicago Cubs",
+    "away_score": 6,
+    "home_score": 7,
+    "venue_name": "Wrigley Field",
+    "away_starting_pitcher": "Chandler, B",
+    "home_starting_pitcher": "Taillon, J",
+    "html_path": "games/2026-04-12-pit-at-chc-824696.html",
+    "title": "PIT @ CHC",
+    "final_score": "PIT 6 - 7 CHC"
+  },
+  {
     "game_pk": 823075,
     "official_date": "2026-04-12",
     "game_datetime": "2026-04-12T18:15:00Z",
