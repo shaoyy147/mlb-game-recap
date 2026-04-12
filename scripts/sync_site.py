@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import argparse
 import sys
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
@@ -274,11 +275,11 @@ def save_manifest(records: list[GameRecord]) -> None:
     MANIFEST_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def fetch_recent_completed_games() -> list[GameRecord]:
+def fetch_recent_completed_games(force_refresh: bool = False) -> list[GameRecord]:
     """抓取最近两周已完成比赛并写出站点文件。"""
     today = get_today_in_mlb_timezone()
     start_date = today - timedelta(days=LOOKBACK_DAYS - 1)
-    existing_records = load_existing_manifest()
+    existing_records = {} if force_refresh else load_existing_manifest()
     records: list[GameRecord] = []
 
     for target_date in daterange(start_date, today):
@@ -302,16 +303,29 @@ def fetch_recent_completed_games() -> list[GameRecord]:
             record = build_record_from_feed(game, live_feed)
             write_game_files(record, play_payload, live_feed.get("liveData", {}).get("boxscore", {}))
             records.append(record)
-            print(f"[game] {record.official_date} {record.away_label}@{record.home_label} gamePk={record.game_pk}")
+            action = "refresh" if force_refresh else "game"
+            print(f"[{action}] {record.official_date} {record.away_label}@{record.home_label} gamePk={record.game_pk}")
 
     records.sort(key=lambda item: (item.official_date, item.game_datetime, item.game_pk), reverse=True)
     return records
 
 
+def parse_args() -> argparse.Namespace:
+    """解析命令行参数。"""
+    parser = argparse.ArgumentParser(description="同步最近两周 MLB 已完成比赛并生成站点")
+    parser.add_argument(
+        "--force-refresh",
+        action="store_true",
+        help="忽略已有输出，重新抓取并覆盖最近两周的全部比赛数据",
+    )
+    return parser.parse_args()
+
+
 def main() -> None:
     """程序入口。"""
+    args = parse_args()
     ensure_dirs()
-    records = fetch_recent_completed_games()
+    records = fetch_recent_completed_games(force_refresh=args.force_refresh)
     cleanup_untracked_outputs(records)
     save_manifest(records)
     render_index(records)

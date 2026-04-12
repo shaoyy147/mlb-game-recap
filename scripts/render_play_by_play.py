@@ -41,6 +41,112 @@ def format_lineup_display_name(full_name: str) -> str:
     return parts[-1]
 
 
+def build_boxscore_player_map(boxscore_payload: dict | None) -> dict[int, dict]:
+    """把 box score 里的球员按 id 建索引。"""
+    if not boxscore_payload:
+        return {}
+
+    players_by_id: dict[int, dict] = {}
+    for side in ("away", "home"):
+        team_payload = boxscore_payload.get("teams", {}).get(side, {})
+        for player in team_payload.get("players", {}).values():
+            person = player.get("person", {})
+            player_id = person.get("id")
+            if player_id is not None:
+                players_by_id[int(player_id)] = player
+    return players_by_id
+
+
+def parse_replaced_player_name(description: str) -> str:
+    """从 substitution 描述里解析被替换球员姓名。"""
+    match = re.search(r"replaces (.+?)(?:, batting \d+(?:st|nd|rd|th),.*|\.)$", description)
+    if not match:
+        return ""
+
+    replaced_name = match.group(1).strip()
+    words = replaced_name.split()
+    if len(words) >= 2 and words[0].islower():
+        replaced_name = " ".join(words[-2:])
+    return replaced_name
+
+
+def get_substitution_team_key(play: dict, event: dict) -> str | None:
+    """根据半局和 substitution 类型判断该换人属于哪支队伍。"""
+    half_inning = str(play.get("about", {}).get("halfInning", "")).lower()
+    event_type = event.get("details", {}).get("eventType")
+
+    if event_type == "offensive_substitution":
+        return "away" if half_inning == "top" else "home"
+    if event_type in {"defensive_substitution", "defensive_switch"}:
+        return "home" if half_inning == "top" else "away"
+    return None
+
+
+def extract_starting_lineup_overrides(payload: dict, boxscore_payload: dict | None = None) -> dict:
+    """从 substitution 事件里反推出被换下的先发球员。"""
+    overrides = {"away": {}, "home": {}}
+    players_by_id = build_boxscore_player_map(boxscore_payload)
+
+    for play in payload.get("allPlays", []):
+        for event in play.get("playEvents", []):
+            details = event.get("details", {})
+            event_type = details.get("eventType")
+            batting_order = event.get("battingOrder")
+            if event_type not in {"offensive_substitution", "defensive_substitution"} or not batting_order:
+                continue
+
+            order = int(str(batting_order)) // 100
+            if order < 1 or order > 9:
+                continue
+
+            team_key = get_substitution_team_key(play, event)
+            if team_key is None or order in overrides[team_key]:
+                continue
+
+            replaced_id = event.get("replacedPlayer", {}).get("id")
+            replaced_player = players_by_id.get(int(replaced_id)) if replaced_id is not None else None
+            replaced_person = replaced_player.get("person", {}) if replaced_player else {}
+            replaced_name = replaced_person.get("fullName") or parse_replaced_player_name(details.get("description") or "")
+            if not replaced_name:
+                continue
+
+            replaced_position = ""
+            if replaced_player:
+                replaced_position = replaced_player.get("position", {}).get("abbreviation", "")
+
+            overrides[team_key][order] = {
+                "order": order,
+                "id": replaced_id,
+                "full_name": replaced_name,
+                "display_name": format_lineup_display_name(replaced_name),
+                "position": replaced_position,
+            }
+
+    return overrides
+
+
+def apply_starting_lineup_overrides(lineups: dict, overrides: dict) -> dict:
+    """把被替换下的先发球员覆盖回先发阵容。"""
+    merged = {}
+
+    for team_key in ("away", "home"):
+        players_by_order = {player["order"]: dict(player) for player in lineups[team_key]["players"]}
+        for order, override in overrides.get(team_key, {}).items():
+            existing = players_by_order.get(order, {})
+            merged_player = dict(existing)
+            merged_player.update(override)
+            if not merged_player.get("position"):
+                merged_player["position"] = existing.get("position", "")
+            players_by_order[order] = merged_player
+
+        merged[team_key] = {
+            "label": lineups[team_key]["label"],
+            "players": [players_by_order[order] for order in sorted(players_by_order)[:9]],
+        }
+
+    return merged
+
+
 def extract_starting_pitchers(payload: dict, away_label: str, home_label: str) -> dict:
     """从 play-by-play 中提取两队先发投手。"""
     away_pitcher = None
@@ -129,7 +235,15 @@ def extract_starting_lineups_from_boxscore(boxscore_payload: dict, away_label: s
             if not batting_order:
                 continue
 
-            order = int(str(batting_order)) // 100
+            batting_order_value = int(str(batting_order))
+            if batting_order_value % 100 != 0:
+                continue
+
+            game_status = player.get("gameStatus", {})
+            if game_status.get("isSubstitute"):
+                continue
+
+            order = batting_order_value // 100
             if order < 1 or order > 9:
                 continue
 
@@ -212,6 +326,18 @@ def normalize_action_event_label(event_type: str | None, fallback_event: str | N
     """把 action 事件名转换成更稳定的展示文案。"""
     if event_type == "pitching_substitution":
         return "Pitching Change"
+    if event_type == "balk":
+        return "Balk"
+    if event_type == "runner_placed":
+        return "Runner Placed On Base"
+    if event_type == "defensive_substitution":
+        return "Defensive Substitution"
+    if event_type == "defensive_switch":
+        return "Defensive Switch"
+    if event_type == "offensive_substitution":
+        if fallback_event == "Offensive Substitution":
+            return "Offensive Substitution"
+        return fallback_event or "Offensive Substitution"
     if event_type and event_type.startswith("stolen_base"):
         return "Stolen Base"
     if event_type and "caught_stealing" in event_type:
@@ -275,17 +401,17 @@ def build_score_update(play: dict, previous_play: dict | None) -> dict | None:
     if away_score == previous_away_score and home_score == previous_home_score:
         return None
 
-    if away_score > home_score:
-        leading_team = "away"
-    elif home_score > away_score:
-        leading_team = "home"
+    if away_score > previous_away_score:
+        scoring_team = "away"
+    elif home_score > previous_home_score:
+        scoring_team = "home"
     else:
-        leading_team = "tie"
+        scoring_team = "tie"
 
     return {
         "away_score": away_score,
         "home_score": home_score,
-        "leading_team": leading_team,
+        "scoring_team": scoring_team,
     }
 
 
@@ -295,6 +421,14 @@ def build_play_view(play: dict, previous_play: dict | None) -> dict:
     batter = play.get("matchup", {}).get("batter", {})
     batter_id = batter.get("id")
     batter_name = batter.get("fullName") or "Batter"
+    event_text = str(result.get("event") or "")
+    normalized_event = event_text.lower()
+    is_negative_result = (
+        "out" in normalized_event
+        or "double play" in normalized_event
+        or "triple play" in normalized_event
+        or "grounded into dp" in normalized_event
+    )
 
     return {
         "event": result.get("event") or result.get("eventType") or "Unknown Event",
@@ -303,6 +437,7 @@ def build_play_view(play: dict, previous_play: dict | None) -> dict:
         "avatar_url": f"https://midfield.mlbstatic.com/v1/people/{batter_id}/spots/120" if batter_id else None,
         "avatar_alt": batter_name,
         "layout": "default",
+        "badge_variant": "negative" if is_negative_result else "default",
         "out_text": build_out_text(play),
         "score_update": build_score_update(play, previous_play),
     }
@@ -314,6 +449,16 @@ def should_include_action_event(event: dict) -> bool:
     event_type = details.get("eventType")
 
     if event_type == "pitching_substitution":
+        return True
+    if event_type == "balk":
+        return True
+    if event_type == "runner_placed":
+        return True
+    if event_type == "defensive_substitution":
+        return True
+    if event_type == "defensive_switch":
+        return True
+    if event_type == "offensive_substitution" and event.get("position", {}).get("abbreviation") in {"PH", "PR"}:
         return True
     if event_type and event_type.startswith("stolen_base"):
         return True
@@ -360,6 +505,27 @@ def build_action_view(event: dict) -> dict:
     if details.get("eventType") == "pitching_substitution":
         layout = "pitching_substitution"
         event_label = "Pitching Substitution"
+    elif details.get("eventType") == "balk":
+        layout = "runner_placed"
+        event_label = "Balk"
+    elif details.get("eventType") == "runner_placed":
+        layout = "runner_placed"
+        event_label = "Runner Placed On Base"
+    elif details.get("eventType") == "defensive_substitution":
+        layout = "pitching_substitution"
+        event_label = "Defensive Substitution"
+    elif details.get("eventType") == "defensive_switch":
+        layout = "pitching_substitution"
+        event_label = "Defensive Switch"
+    elif details.get("eventType") == "offensive_substitution":
+        layout = "pitching_substitution"
+        position_abbr = event.get("position", {}).get("abbreviation")
+        if position_abbr == "PH":
+            event_label = "Pinch Hitter"
+        elif position_abbr == "PR":
+            event_label = "Pinch Runner"
+        else:
+            event_label = "Offensive Substitution"
     elif details.get("eventType") and details.get("eventType").startswith("stolen_base"):
         layout = "stolen_base"
     else:
@@ -368,6 +534,7 @@ def build_action_view(event: dict) -> dict:
     return {
         "event": event_label,
         "description": details.get("description") or "",
+        "description_lines": [details.get("description") or ""],
         "avatar_text": build_event_avatar_text(player_name, event_label),
         "avatar_url": None,
         "avatar_alt": event_label,
@@ -381,9 +548,39 @@ def build_preceding_action_views(play: dict) -> list[dict]:
     """提取每个 at-bat 结果之前需要展示的补充事件。"""
     action_views: list[dict] = []
     for event in play.get("playEvents", []):
-        if should_include_action_event(event) and not is_redundant_runner_out_action(play, event):
-            action_views.append(build_action_view(event))
+        if not should_include_action_event(event) or is_redundant_runner_out_action(play, event):
+            continue
+
+        action_view = build_action_view(event)
+        if (
+            action_views
+            and action_views[-1].get("event") == "Defensive Switch"
+            and action_view.get("event") == "Defensive Switch"
+        ):
+            previous_lines = action_views[-1].setdefault("description_lines", [action_views[-1].get("description", "")])
+            current_lines = action_view.get("description_lines") or [action_view.get("description", "")]
+            previous_lines.extend(line for line in current_lines if line)
+            action_views[-1]["description"] = "\n".join(previous_lines)
+            continue
+
+        action_views.append(action_view)
     return action_views
+
+
+def append_action_view(action_views: list[dict], action_view: dict) -> None:
+    """把补充事件加入列表；相邻 defensive switch 合并为一条。"""
+    if (
+        action_views
+        and action_views[-1].get("event") == "Defensive Switch"
+        and action_view.get("event") == "Defensive Switch"
+    ):
+        previous_lines = action_views[-1].setdefault("description_lines", [action_views[-1].get("description", "")])
+        current_lines = action_view.get("description_lines") or [action_view.get("description", "")]
+        previous_lines.extend(line for line in current_lines if line)
+        action_views[-1]["description"] = "\n".join(previous_lines)
+        return
+
+    action_views.append(action_view)
 
 
 def empty_bases() -> dict:
@@ -438,14 +635,61 @@ def apply_runner_movements(state: dict, runner_movements: list[dict]) -> None:
         apply_runner_movement(state, runner_movement)
 
 
+def synthesize_runner_placed_movement(event: dict) -> dict | None:
+    """为缺少 runners[] movement 的 runner_placed 事件合成跑垒变化。"""
+    if event.get("details", {}).get("eventType") != "runner_placed":
+        return None
+
+    player = event.get("player") or {}
+    runner_id = player.get("id")
+    base = event.get("base")
+    if runner_id is None or base not in {1, 2, 3}:
+        return None
+
+    return {
+        "movement": {
+            "originBase": None,
+            "start": None,
+            "end": f"{base}B",
+            "outBase": None,
+            "isOut": False,
+            "outNumber": None,
+        },
+        "details": {
+            "event": event.get("details", {}).get("event"),
+            "eventType": "runner_placed",
+            "movementReason": None,
+            "runner": {
+                "id": runner_id,
+                "fullName": player.get("fullName"),
+                "link": player.get("link"),
+            },
+            "responsiblePitcher": None,
+            "isScoringEvent": False,
+            "rbi": False,
+            "earned": False,
+            "teamUnearned": False,
+            "playIndex": event.get("index"),
+        },
+    }
+
+
 def get_action_runner_movements(play: dict, event: dict) -> list[dict]:
     """取某个 action event 对应的 runner movement。"""
     event_index = event.get("index")
-    return [
+    runner_movements = [
         runner_movement
         for runner_movement in play.get("runners", [])
         if runner_movement.get("details", {}).get("playIndex") == event_index
     ]
+    if runner_movements:
+        return runner_movements
+
+    synthetic_movement = synthesize_runner_placed_movement(event)
+    if synthetic_movement:
+        return [synthetic_movement]
+
+    return []
 
 
 def get_final_runner_movements(play: dict) -> list[dict]:
@@ -510,7 +754,7 @@ def build_sections(all_plays: list[dict]) -> list[dict]:
 
         for event in play.get("playEvents", []):
             if should_include_action_event(event) and not is_redundant_runner_out_action(play, event):
-                sections[-1]["plays"].append(build_action_view(event))
+                append_action_view(sections[-1]["plays"], build_action_view(event))
                 apply_runner_movements(game_state, get_action_runner_movements(play, event))
 
         play_view = build_play_view(play, previous_play)
@@ -562,11 +806,13 @@ def render_html_from_payload(
     """直接从内存中的 play-by-play 数据渲染 HTML。"""
     sections = build_sections(payload.get("allPlays", []))
     starting_pitchers = extract_starting_pitchers(payload, away_label, home_label)
-    starting_lineups = (
-        extract_starting_lineups_from_boxscore(boxscore_payload, away_label, home_label)
-        if boxscore_payload
-        else extract_starting_lineups(payload, away_label, home_label)
-    )
+    if boxscore_payload:
+        starting_lineups = extract_starting_lineups_from_boxscore(boxscore_payload, away_label, home_label)
+    else:
+        starting_lineups = apply_starting_lineup_overrides(
+            extract_starting_lineups(payload, away_label, home_label),
+            extract_starting_lineup_overrides(payload, None),
+        )
     for section in sections:
         for play in section["plays"]:
             if play.get("layout") == "default":

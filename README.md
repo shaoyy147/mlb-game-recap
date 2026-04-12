@@ -5,7 +5,8 @@
 ## 功能
 
 - 定时抓取最近 14 天内已完成比赛
-- 增量同步：已存在且 HTML 仍在的比赛会跳过重抓
+- 定时任务默认增量同步：已存在且 HTML 仍在的比赛会跳过重抓
+- 手动执行时支持全量覆盖最近两周数据
 - 为每场比赛生成：
   - 回放 HTML 页面
 - 生成导航首页，列出最近两周比赛
@@ -40,6 +41,12 @@ python -m pip install -r requirements.txt
 python scripts/sync_site.py
 ```
 
+如需忽略已有输出并全量覆盖最近两周数据：
+
+```bash
+python scripts/sync_site.py --force-refresh
+```
+
 生成完成后，主要文件在：
 
 - `docs/index.html`
@@ -54,8 +61,8 @@ python scripts/sync_site.py
 
 行为：
 
-- 每天 `16:00 UTC` 到次日 `02:30 UTC` 之间，每 10 分钟自动运行一次
-- 也可以手动触发
+- 每天 `18:30 UTC` 到次日 `05:30 UTC` 之间，每 10 分钟自动运行一次
+- 也可以手动触发；手动触发时会全量覆盖最近两周数据
 - 自动抓取最近两周已完成比赛
 - 自动提交 `docs/` 变更
 - 自动部署到 GitHub Pages
@@ -123,9 +130,10 @@ https://statsapi.mlb.com/api/v1.1/game/<gamePk>/feed/live
 3. 对每一天调用赛程接口
 4. 只保留已经完成的比赛
 5. 对每场完成比赛调用 live feed 接口
-6. 如果 `docs/games.json` 里已有该比赛且对应 HTML 仍存在，则直接复用并跳过重抓
-7. 对新增比赛生成比赛 HTML、导航页和比赛清单
-8. 删除 14 天之外的旧页面
+6. 定时任务下，如果 `docs/games.json` 里已有该比赛且对应 HTML 仍存在，则直接复用并跳过重抓
+7. 手动执行或传入 `--force-refresh` 时，忽略已有比赛并全量重抓最近两周数据
+8. 对比赛生成比赛 HTML、导航页和比赛清单
+9. 删除 14 天之外的旧页面
 
 ### 页面实际使用的数据
 
