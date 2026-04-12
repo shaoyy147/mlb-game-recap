@@ -10,6 +10,17 @@
             border-color: #005a9c;
             color: #005a9c;
         }
+        .badge-red {
+            border-color: #8b1e2d;
+            color: #8b1e2d;
+        }
+        .player-name-ref {
+            color: #6b7280;
+            text-decoration-line: underline;
+            text-decoration-style: dashed;
+            text-decoration-color: #9ca3af;
+            text-underline-offset: 0.14em;
+        }
     </style>
 </head>
 <body class="min-h-screen bg-gray-50 py-8 font-sans text-gray-900">
@@ -105,10 +116,10 @@
                         <li class="flex items-center justify-between">
                             <div class="flex items-center gap-3">
                                 <span class="w-2 text-sm font-medium text-gray-400">6</span>
-                                <span class="text-[14px] font-semibold text-gray-800">Jr.</span>
+                                <span class="text-[14px] font-semibold text-gray-800">Young</span>
                             </div>
                             
-                            <span class="text-[11px] font-bold text-gray-500">CF</span>
+                            <span class="text-[11px] font-bold text-gray-500">1B</span>
                             
                         </li>
                         
@@ -276,7 +287,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Francisco Lindor triples (2) on a sharp fly ball to right fielder Jordan Walker.
+                            <span class="player-name-ref">Francisco Lindor</span> triples (2) on a sharp fly ball to right fielder Jordan Walker.
                             
                         </p>
 
@@ -306,12 +317,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Juan Soto grounds out, shortstop Masyn Winn to first baseman Alec Burleson.
+                            <span class="player-name-ref">Juan Soto</span> grounds out, shortstop Masyn Winn to first baseman Alec Burleson.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -343,12 +354,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Bo Bichette grounds out, second baseman JJ Wetherholt to first baseman Alec Burleson. Francisco Lindor scores.
+                            <span class="player-name-ref">Bo Bichette</span> grounds out, second baseman JJ Wetherholt to first baseman Alec Burleson. <span class="player-name-ref">Francisco Lindor</span> scores.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -386,12 +397,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jorge Polanco grounds out, second baseman JJ Wetherholt to first baseman Alec Burleson.
+                            <span class="player-name-ref">Jorge Polanco</span> grounds out, second baseman JJ Wetherholt to first baseman Alec Burleson.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -436,7 +447,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            JJ Wetherholt walks.
+                            <span class="player-name-ref">JJ Wetherholt</span> walks.
                             
                         </p>
 
@@ -466,17 +477,37 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Iván Herrera grounds out, third baseman Bo Bichette to first baseman Jared Young. JJ Wetherholt to 2nd.
+                            <span class="player-name-ref">Iván Herrera</span> grounds out, third baseman Bo Bichette to first baseman Jared Young. <span class="player-name-ref">JJ Wetherholt</span> to 2nd.
                             
                             <span class="font-bold">1 out</span>
                             
                         </p>
 
+                        
+                    </div>
+                </div>
+                
+                
+                
+                <div class="flex items-start gap-4">
+                    <div class="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col justify-center pt-0.5">
+                        <span class="mb-0.5 text-sm font-bold text-gray-500">Balk</span>
+                        
+                        <p class="text-[17px] leading-snug">
+                            With <span class="player-name-ref">Alec Burleson</span> batting, <span class="player-name-ref">JJ Wetherholt</span> advances to 3rd on a balk.
+                            
+                        </p>
                         
                     </div>
                 </div>
@@ -492,8 +523,8 @@
                         
                         <div class="mb-2 flex items-center gap-2">
                             <svg width="22" viewBox="0 0 24 17.25" class="text-black">
-                                <rect fill="transparent" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(5.25, 7.25) rotate(-315)"></rect>
-                                <rect fill="currentColor" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(12, 0.75) rotate(-315)"></rect>
+                                <rect fill="currentColor" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(5.25, 7.25) rotate(-315)"></rect>
+                                <rect fill="transparent" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(12, 0.75) rotate(-315)"></rect>
                                 <rect fill="transparent" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(18.75, 7.25) rotate(-315)"></rect>
                             </svg>
                             <span class="mt-0.5 text-sm font-semibold leading-none text-gray-900">1 Out</span>
@@ -508,14 +539,14 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Alec Burleson singles on a line drive to right fielder Brett Baty. JJ Wetherholt scores.
+                            <span class="player-name-ref">Alec Burleson</span> singles on a line drive to right fielder Brett Baty. <span class="player-name-ref">JJ Wetherholt</span> scores.
                             
                         </p>
 
                         
                         <p class="mt-4 text-[17px] text-gray-900">
                             
-                            NYM 1, STL 1
+                            NYM 1, <span class="font-extrabold">STL 1</span>
                             
                         </p>
                         
@@ -544,12 +575,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Masyn Winn strikes out swinging.
+                            <span class="player-name-ref">Masyn Winn</span> strikes out swinging.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -581,12 +612,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Nolan Gorman strikes out swinging.
+                            <span class="player-name-ref">Nolan Gorman</span> strikes out swinging.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -626,12 +657,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Brett Baty flies out sharply to left fielder Nathan Church.
+                            <span class="player-name-ref">Brett Baty</span> flies out sharply to left fielder Nathan Church.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -663,12 +694,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jared Young grounds out softly to pitcher Kyle Leahy.
+                            <span class="player-name-ref">Jared Young</span> grounds out softly to pitcher <span class="player-name-ref">Kyle Leahy</span>.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -705,7 +736,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Marcus Semien walks.
+                            <span class="player-name-ref">Marcus Semien</span> walks.
                             
                         </p>
 
@@ -740,7 +771,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Carson Benge singles on a ground ball to right fielder Jordan Walker. Marcus Semien to 3rd.
+                            <span class="player-name-ref">Carson Benge</span> singles on a ground ball to right fielder Jordan Walker. <span class="player-name-ref">Marcus Semien</span> to 3rd.
                             
                         </p>
 
@@ -761,10 +792,12 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">Stolen Base</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Carson Benge steals (2) 2nd base.
+                            <span class="player-name-ref">Carson Benge</span> steals (2) 2nd base.
                             
                         </p>
+                        
                     </div>
                 </div>
                 
@@ -790,12 +823,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Francisco Alvarez strikes out swinging.
+                            <span class="player-name-ref">Francisco Alvarez</span> strikes out swinging.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -840,7 +873,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jordan Walker singles on a ground ball to third baseman Bo Bichette.
+                            <span class="player-name-ref">Jordan Walker</span> singles on a ground ball to third baseman Bo Bichette.
                             
                         </p>
 
@@ -870,12 +903,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Forceout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Nathan Church grounds into a force out, shortstop Francisco Lindor to second baseman Marcus Semien. Jordan Walker out at 2nd. Nathan Church to 1st.
+                            <span class="player-name-ref">Nathan Church</span> grounds into a force out, shortstop Francisco Lindor to second baseman Marcus Semien. <span class="player-name-ref">Jordan Walker</span> out at 2nd. <span class="player-name-ref">Nathan Church</span> to 1st.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -907,12 +940,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Pedro Pagés grounds out softly, pitcher Clay Holmes to first baseman Jared Young. Nathan Church to 2nd.
+                            <span class="player-name-ref">Pedro Pagés</span> grounds out softly, pitcher <span class="player-name-ref">Clay Holmes</span> to first baseman Jared Young. <span class="player-name-ref">Nathan Church</span> to 2nd.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -944,12 +977,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Victor Scott II strikes out swinging.
+                            <span class="player-name-ref">Victor Scott II</span> strikes out swinging.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -989,12 +1022,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Francisco Lindor grounds out to first baseman Alec Burleson.
+                            <span class="player-name-ref">Francisco Lindor</span> grounds out to first baseman Alec Burleson.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -1031,7 +1064,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Juan Soto singles on a line drive to right fielder Jordan Walker.
+                            <span class="player-name-ref">Juan Soto</span> singles on a line drive to right fielder Jordan Walker.
                             
                         </p>
 
@@ -1061,12 +1094,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Grounded Into DP
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Bo Bichette grounds into a double play, second baseman JJ Wetherholt to shortstop Masyn Winn to first baseman Alec Burleson. Juan Soto out at 2nd. Bo Bichette out at 1st.
+                            <span class="player-name-ref">Bo Bichette</span> grounds into a double play, second baseman JJ Wetherholt to shortstop Masyn Winn to first baseman Alec Burleson. <span class="player-name-ref">Juan Soto</span> out at 2nd. <span class="player-name-ref">Bo Bichette</span> out at 1st.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -1106,12 +1139,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            JJ Wetherholt grounds out to first baseman Jared Young.
+                            <span class="player-name-ref">JJ Wetherholt</span> grounds out to first baseman Jared Young.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -1143,12 +1176,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Pop Out
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Iván Herrera pops out to second baseman Marcus Semien.
+                            <span class="player-name-ref">Iván Herrera</span> pops out to second baseman Marcus Semien.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -1185,7 +1218,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Alec Burleson doubles (1) on a ground ball to left fielder Juan Soto.
+                            <span class="player-name-ref">Alec Burleson</span> doubles (1) on a ground ball to left fielder Juan Soto.
                             
                         </p>
 
@@ -1220,7 +1253,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Masyn Winn walks.
+                            <span class="player-name-ref">Masyn Winn</span> walks.
                             
                         </p>
 
@@ -1250,12 +1283,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Nolan Gorman grounds out, first baseman Jared Young to pitcher Clay Holmes.
+                            <span class="player-name-ref">Nolan Gorman</span> grounds out, first baseman Jared Young to pitcher <span class="player-name-ref">Clay Holmes</span>.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -1300,7 +1333,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jorge Polanco hits a ground-rule double (1) on a line drive down the right-field line.
+                            <span class="player-name-ref">Jorge Polanco</span> hits a ground-rule double (1) on a line drive down the right-field line.
                             
                         </p>
 
@@ -1330,12 +1363,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Lineout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Brett Baty lines out to left fielder Nathan Church.
+                            <span class="player-name-ref">Brett Baty</span> lines out to left fielder Nathan Church.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -1367,12 +1400,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jared Young grounds out, shortstop Masyn Winn to first baseman Alec Burleson. Jorge Polanco to 3rd.
+                            <span class="player-name-ref">Jared Young</span> grounds out, shortstop Masyn Winn to first baseman Alec Burleson. <span class="player-name-ref">Jorge Polanco</span> to 3rd.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -1404,12 +1437,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Pop Out
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Marcus Semien pops out to shortstop Masyn Winn.
+                            <span class="player-name-ref">Marcus Semien</span> pops out to shortstop Masyn Winn.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -1454,7 +1487,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jordan Walker walks.
+                            <span class="player-name-ref">Jordan Walker</span> walks.
                             
                         </p>
 
@@ -1484,12 +1517,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Nathan Church flies out sharply to center fielder Carson Benge.
+                            <span class="player-name-ref">Nathan Church</span> flies out sharply to center fielder Carson Benge.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -1521,12 +1554,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Grounded Into DP
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Pedro Pagés grounds into a double play, shortstop Francisco Lindor to second baseman Marcus Semien to first baseman Jared Young. Jordan Walker out at 2nd. Pedro Pagés out at 1st.
+                            <span class="player-name-ref">Pedro Pagés</span> grounds into a double play, shortstop Francisco Lindor to second baseman Marcus Semien to first baseman Jared Young. <span class="player-name-ref">Jordan Walker</span> out at 2nd. <span class="player-name-ref">Pedro Pagés</span> out at 1st.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -1571,7 +1604,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Carson Benge singles on a ground ball to left fielder Nathan Church.
+                            <span class="player-name-ref">Carson Benge</span> singles on a ground ball to left fielder Nathan Church.
                             
                         </p>
 
@@ -1601,12 +1634,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Pop Out
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Francisco Alvarez pops out to shortstop Masyn Winn.
+                            <span class="player-name-ref">Francisco Alvarez</span> pops out to shortstop Masyn Winn.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -1643,7 +1676,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Francisco Lindor walks. Carson Benge to 2nd.
+                            <span class="player-name-ref">Francisco Lindor</span> walks. <span class="player-name-ref">Carson Benge</span> to 2nd.
                             
                         </p>
 
@@ -1673,12 +1706,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Forceout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Juan Soto grounds into a force out, second baseman JJ Wetherholt to shortstop Masyn Winn. Carson Benge to 3rd. Francisco Lindor out at 2nd. Juan Soto to 1st.
+                            <span class="player-name-ref">Juan Soto</span> grounds into a force out, second baseman JJ Wetherholt to shortstop Masyn Winn. <span class="player-name-ref">Carson Benge</span> to 3rd. <span class="player-name-ref">Francisco Lindor</span> out at 2nd. <span class="player-name-ref">Juan Soto</span> to 1st.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -1715,7 +1748,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Bo Bichette singles on a sharp line drive to right fielder Jordan Walker. Carson Benge scores. Juan Soto to 3rd.
+                            <span class="player-name-ref">Bo Bichette</span> singles on a sharp line drive to right fielder Jordan Walker. <span class="player-name-ref">Carson Benge</span> scores. <span class="player-name-ref">Juan Soto</span> to 3rd.
                             
                         </p>
 
@@ -1751,12 +1784,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jorge Polanco grounds out, second baseman JJ Wetherholt to first baseman Alec Burleson.
+                            <span class="player-name-ref">Jorge Polanco</span> grounds out, second baseman JJ Wetherholt to first baseman Alec Burleson.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -1796,12 +1829,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Victor Scott II strikes out swinging.
+                            <span class="player-name-ref">Victor Scott II</span> strikes out swinging.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -1833,12 +1866,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            JJ Wetherholt grounds out, second baseman Marcus Semien to first baseman Jared Young.
+                            <span class="player-name-ref">JJ Wetherholt</span> grounds out, second baseman Marcus Semien to first baseman Jared Young.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -1870,12 +1903,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Iván Herrera grounds out, third baseman Bo Bichette to first baseman Jared Young.
+                            <span class="player-name-ref">Iván Herrera</span> grounds out, third baseman Bo Bichette to first baseman Jared Young.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -1920,7 +1953,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Brett Baty singles on a line drive to left fielder Nathan Church.
+                            <span class="player-name-ref">Brett Baty</span> singles on a line drive to left fielder Nathan Church.
                             
                         </p>
 
@@ -1955,7 +1988,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jared Young doubles (1) on a sharp line drive to right fielder Jordan Walker. Brett Baty scores.
+                            <span class="player-name-ref">Jared Young</span> doubles (1) on a sharp line drive to right fielder Jordan Walker. <span class="player-name-ref">Brett Baty</span> scores.
                             
                         </p>
 
@@ -1981,10 +2014,12 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">Pitching Substitution</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Pitching Change: Matt Svanson replaces Kyle Leahy.
+                            Pitching Change: <span class="player-name-ref">Matt Svanson</span> replaces Kyle Leahy.
                             
                         </p>
+                        
                     </div>
                 </div>
                 
@@ -2010,12 +2045,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Marcus Semien strikes out on a foul tip.
+                            <span class="player-name-ref">Marcus Semien</span> strikes out on a foul tip.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -2047,12 +2082,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Carson Benge grounds out, shortstop Masyn Winn to first baseman Alec Burleson. Jared Young to 3rd.
+                            <span class="player-name-ref">Carson Benge</span> grounds out, shortstop Masyn Winn to first baseman Alec Burleson. <span class="player-name-ref">Jared Young</span> to 3rd.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -2089,7 +2124,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Pedro Pagés challenged (pitch result), call on the field was confirmed: Francisco Alvarez walks.
+                            Pedro Pagés challenged (pitch result), call on the field was confirmed: <span class="player-name-ref">Francisco Alvarez</span> walks.
                             
                         </p>
 
@@ -2124,7 +2159,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Francisco Lindor hit by pitch. Francisco Alvarez to 2nd.
+                            <span class="player-name-ref">Francisco Lindor</span> hit by pitch. <span class="player-name-ref">Francisco Alvarez</span> to 2nd.
                             
                         </p>
 
@@ -2159,7 +2194,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Juan Soto walks. Jared Young scores. Francisco Alvarez to 3rd. Francisco Lindor to 2nd.
+                            <span class="player-name-ref">Juan Soto</span> walks. <span class="player-name-ref">Jared Young</span> scores. <span class="player-name-ref">Francisco Alvarez</span> to 3rd. <span class="player-name-ref">Francisco Lindor</span> to 2nd.
                             
                         </p>
 
@@ -2195,12 +2230,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Lineout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Bo Bichette lines out to right fielder Jordan Walker.
+                            <span class="player-name-ref">Bo Bichette</span> lines out to right fielder Jordan Walker.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -2240,12 +2275,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Alec Burleson strikes out swinging.
+                            <span class="player-name-ref">Alec Burleson</span> strikes out swinging.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -2277,12 +2312,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Masyn Winn flies out to center fielder Carson Benge.
+                            <span class="player-name-ref">Masyn Winn</span> flies out to center fielder Carson Benge.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -2319,14 +2354,14 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Nolan Gorman homers (2) on a fly ball to right center field.
+                            <span class="player-name-ref">Nolan Gorman</span> homers (2) on a fly ball to right center field.
                             
                         </p>
 
                         
                         <p class="mt-4 text-[17px] text-gray-900">
                             
-                            <span class="font-extrabold">NYM 4</span>, STL 2
+                            NYM 4, <span class="font-extrabold">STL 2</span>
                             
                         </p>
                         
@@ -2345,10 +2380,12 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">Pitching Substitution</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Pitching Change: Tobias Myers replaces Clay Holmes.
+                            Pitching Change: <span class="player-name-ref">Tobias Myers</span> replaces Clay Holmes.
                             
                         </p>
+                        
                     </div>
                 </div>
                 
@@ -2374,12 +2411,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jordan Walker flies out to center fielder Carson Benge.
+                            <span class="player-name-ref">Jordan Walker</span> flies out to center fielder Carson Benge.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -2424,7 +2461,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jorge Polanco singles on a line drive to right fielder Jordan Walker.
+                            <span class="player-name-ref">Jorge Polanco</span> singles on a line drive to right fielder Jordan Walker.
                             
                         </p>
 
@@ -2454,12 +2491,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Brett Baty strikes out swinging.
+                            <span class="player-name-ref">Brett Baty</span> strikes out swinging.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -2491,17 +2528,38 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Forceout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jared Young grounds into a force out, first baseman Alec Burleson to shortstop Masyn Winn. Jorge Polanco out at 2nd. Jared Young to 1st.
+                            <span class="player-name-ref">Jared Young</span> grounds into a force out, first baseman Alec Burleson to shortstop Masyn Winn. <span class="player-name-ref">Jorge Polanco</span> out at 2nd. <span class="player-name-ref">Jared Young</span> to 1st.
                             
                             <span class="font-bold">2 outs</span>
                             
                         </p>
 
+                        
+                    </div>
+                </div>
+                
+                
+                
+                <div class="flex items-start gap-4">
+                    <div class="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="w-6 h-6 text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9H5m0 0l3.5-3.5M5 9l3.5 3.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15h14m0 0l-3.5-3.5M19 15l-3.5 3.5" />
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col justify-center pt-0.5">
+                        <span class="mb-0.5 text-sm font-bold text-gray-500">Pinch Runner</span>
+                        
+                        <p class="text-[17px] leading-snug">
+                            Offensive Substitution: Pinch-runner Luis Robert Jr. replaces Jared Young.
+                            
+                        </p>
                         
                     </div>
                 </div>
@@ -2528,12 +2586,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Marcus Semien strikes out swinging.
+                            <span class="player-name-ref">Marcus Semien</span> strikes out swinging.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -2551,6 +2609,33 @@
             <h1 class="mb-8 border-t border-gray-100 pt-8 text-3xl font-extrabold">Bottom 7th</h1>
 
             <div class="flex flex-col gap-8">
+                
+                
+                <div class="flex items-start gap-4">
+                    <div class="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="w-6 h-6 text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9H5m0 0l3.5-3.5M5 9l3.5 3.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15h14m0 0l-3.5-3.5M19 15l-3.5 3.5" />
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col justify-center pt-0.5">
+                        <span class="mb-0.5 text-sm font-bold text-gray-500">Defensive Switch</span>
+                        
+                        <div class="text-[17px] leading-snug">
+                            
+                            <p>Defensive switch from right field to first base for Brett Baty.</p>
+                            
+                            <p>Luis Robert Jr. remains in the game as the center fielder.</p>
+                            
+                            <p>Defensive switch from center field to right field for Carson Benge.</p>
+                            
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                
                 
                 
                 <div class="flex items-start gap-4">
@@ -2573,12 +2658,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Nathan Church called out on strikes.
+                            <span class="player-name-ref">Nathan Church</span> called out on strikes.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -2610,12 +2695,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Pedro Pagés strikes out swinging.
+                            <span class="player-name-ref">Pedro Pagés</span> strikes out swinging.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -2647,12 +2732,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Victor Scott II strikes out swinging.
+                            <span class="player-name-ref">Victor Scott II</span> strikes out swinging.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -2682,10 +2767,12 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">Pitching Substitution</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Pitching Change: George Soriano replaces Matt Svanson.
+                            Pitching Change: <span class="player-name-ref">George Soriano</span> replaces Matt Svanson.
                             
                         </p>
+                        
                     </div>
                 </div>
                 
@@ -2711,12 +2798,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Lineout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Carson Benge lines out to right fielder Jordan Walker.
+                            <span class="player-name-ref">Carson Benge</span> lines out to right fielder Jordan Walker.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -2753,7 +2840,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Francisco Alvarez doubles (1) on a ground ball to left fielder Nathan Church.
+                            <span class="player-name-ref">Francisco Alvarez</span> doubles (1) on a ground ball to left fielder Nathan Church.
                             
                         </p>
 
@@ -2783,12 +2870,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Francisco Lindor flies out to center fielder Victor Scott II.
+                            <span class="player-name-ref">Francisco Lindor</span> flies out to center fielder Victor Scott II.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -2825,7 +2912,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            George Soriano intentionally walks Juan Soto.
+                            <span class="player-name-ref">George Soriano</span> intentionally walks <span class="player-name-ref">Juan Soto</span>.
                             
                         </p>
 
@@ -2855,12 +2942,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Bo Bichette grounds out, third baseman Nolan Gorman to first baseman Alec Burleson.
+                            <span class="player-name-ref">Bo Bichette</span> grounds out, third baseman Nolan Gorman to first baseman Alec Burleson.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -2890,10 +2977,12 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">Pitching Substitution</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Pitching Change: Brooks Raley replaces Tobias Myers.
+                            Pitching Change: <span class="player-name-ref">Brooks Raley</span> replaces Tobias Myers.
                             
                         </p>
+                        
                     </div>
                 </div>
                 
@@ -2919,12 +3008,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            JJ Wetherholt flies out to center fielder Luis Robert Jr.
+                            <span class="player-name-ref">JJ Wetherholt</span> flies out to center fielder Luis Robert Jr.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -2961,7 +3050,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Iván Herrera singles on a sharp line drive to left fielder Juan Soto.
+                            <span class="player-name-ref">Iván Herrera</span> singles on a sharp line drive to left fielder Juan Soto.
                             
                         </p>
 
@@ -2991,12 +3080,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Alec Burleson flies out to center fielder Luis Robert Jr.
+                            <span class="player-name-ref">Alec Burleson</span> flies out to center fielder Luis Robert Jr.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -3028,12 +3117,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Masyn Winn grounds out, second baseman Marcus Semien to first baseman Brett Baty.
+                            <span class="player-name-ref">Masyn Winn</span> grounds out, second baseman Marcus Semien to first baseman Brett Baty.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -3073,12 +3162,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Lineout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jorge Polanco lines out to second baseman JJ Wetherholt.
+                            <span class="player-name-ref">Jorge Polanco</span> lines out to second baseman JJ Wetherholt.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -3110,12 +3199,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Brett Baty grounds out, pitcher George Soriano to first baseman Alec Burleson.
+                            <span class="player-name-ref">Brett Baty</span> grounds out, pitcher <span class="player-name-ref">George Soriano</span> to first baseman Alec Burleson.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -3147,12 +3236,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Luis Robert Jr. grounds out, third baseman Nolan Gorman to first baseman Alec Burleson.
+                            <span class="player-name-ref">Luis Robert Jr.</span> grounds out, third baseman Nolan Gorman to first baseman Alec Burleson.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -3182,10 +3271,12 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">Pitching Substitution</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Pitching Change: Devin Williams replaces Brooks Raley.
+                            Pitching Change: <span class="player-name-ref">Devin Williams</span> replaces Brooks Raley.
                             
                         </p>
+                        
                     </div>
                 </div>
                 
@@ -3211,12 +3302,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Pop Out
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Nolan Gorman pops out to third baseman Bo Bichette.
+                            <span class="player-name-ref">Nolan Gorman</span> pops out to third baseman Bo Bichette.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -3248,12 +3339,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Pop Out
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jordan Walker pops out to first baseman Brett Baty in foul territory.
+                            <span class="player-name-ref">Jordan Walker</span> pops out to first baseman Brett Baty in foul territory.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -3285,12 +3376,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Nathan Church strikes out swinging.
+                            <span class="player-name-ref">Nathan Church</span> strikes out swinging.
                             
                             <span class="font-bold">3 outs</span>
                             

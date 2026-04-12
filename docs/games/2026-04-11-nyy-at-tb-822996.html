@@ -10,6 +10,17 @@
             border-color: #005a9c;
             color: #005a9c;
         }
+        .badge-red {
+            border-color: #8b1e2d;
+            color: #8b1e2d;
+        }
+        .player-name-ref {
+            color: #6b7280;
+            text-decoration-line: underline;
+            text-decoration-style: dashed;
+            text-decoration-color: #9ca3af;
+            text-underline-offset: 0.14em;
+        }
     </style>
 </head>
 <body class="min-h-screen bg-gray-50 py-8 font-sans text-gray-900">
@@ -95,7 +106,7 @@
                         <li class="flex items-center justify-between">
                             <div class="flex items-center gap-3">
                                 <span class="w-2 text-sm font-medium text-gray-400">5</span>
-                                <span class="text-[14px] font-semibold text-gray-800">Grichuk</span>
+                                <span class="text-[14px] font-semibold text-gray-800">Stanton</span>
                             </div>
                             
                             <span class="text-[11px] font-bold text-gray-500">DH</span>
@@ -135,7 +146,7 @@
                         <li class="flex items-center justify-between">
                             <div class="flex items-center gap-3">
                                 <span class="w-2 text-sm font-medium text-gray-400">9</span>
-                                <span class="text-[14px] font-semibold text-gray-800">Rosario</span>
+                                <span class="text-[14px] font-semibold text-gray-800">McMahon</span>
                             </div>
                             
                             <span class="text-[11px] font-bold text-gray-500">3B</span>
@@ -222,10 +233,10 @@
                         <li class="flex items-center justify-between">
                             <div class="flex items-center gap-3">
                                 <span class="w-2 text-sm font-medium text-gray-400">8</span>
-                                <span class="text-[14px] font-semibold text-gray-800">Simpson</span>
+                                <span class="text-[14px] font-semibold text-gray-800">Fortes</span>
                             </div>
                             
-                            <span class="text-[11px] font-bold text-gray-500">LF</span>
+                            <span class="text-[11px] font-bold text-gray-500">C</span>
                             
                         </li>
                         
@@ -276,7 +287,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Trent Grisham walks.
+                            <span class="player-name-ref">Trent Grisham</span> walks.
                             
                         </p>
 
@@ -306,12 +317,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Aaron Judge strikes out swinging.
+                            <span class="player-name-ref">Aaron Judge</span> strikes out swinging.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -348,7 +359,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Cody Bellinger singles on a ground ball to right fielder Jonny DeLuca. Trent Grisham to 3rd.
+                            <span class="player-name-ref">Cody Bellinger</span> singles on a ground ball to right fielder Jonny DeLuca. <span class="player-name-ref">Trent Grisham</span> to 3rd.
                             
                         </p>
 
@@ -369,10 +380,12 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">Stolen Base</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Cody Bellinger steals (3) 2nd base.
+                            <span class="player-name-ref">Cody Bellinger</span> steals (3) 2nd base.
                             
                         </p>
+                        
                     </div>
                 </div>
                 
@@ -398,12 +411,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Ben Rice called out on strikes.
+                            <span class="player-name-ref">Ben Rice</span> called out on strikes.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -435,12 +448,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Lineout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Giancarlo Stanton lines out to left fielder Ryan Vilade.
+                            <span class="player-name-ref">Giancarlo Stanton</span> lines out to left fielder Ryan Vilade.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -480,12 +493,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Yandy Díaz strikes out swinging.
+                            <span class="player-name-ref">Yandy Díaz</span> strikes out swinging.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -517,12 +530,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Ryan Vilade flies out sharply to left fielder Cody Bellinger.
+                            <span class="player-name-ref">Ryan Vilade</span> flies out sharply to left fielder Cody Bellinger.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -554,12 +567,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jonathan Aranda grounds out, shortstop José Caballero to first baseman Ben Rice.
+                            <span class="player-name-ref">Jonathan Aranda</span> grounds out, shortstop José Caballero to first baseman Ben Rice.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -599,12 +612,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jazz Chisholm Jr. flies out to center fielder Cedric Mullins.
+                            <span class="player-name-ref">Jazz Chisholm Jr.</span> flies out to center fielder Cedric Mullins.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -641,7 +654,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Austin Wells homers (1) on a fly ball to right field.
+                            <span class="player-name-ref">Austin Wells</span> homers (1) on a fly ball to right field.
                             
                         </p>
 
@@ -677,12 +690,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            José Caballero strikes out swinging.
+                            <span class="player-name-ref">José Caballero</span> strikes out swinging.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -719,7 +732,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Ryan McMahon singles on a line drive to right fielder Jonny DeLuca.
+                            <span class="player-name-ref">Ryan McMahon</span> singles on a line drive to right fielder Jonny DeLuca.
                             
                         </p>
 
@@ -749,12 +762,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Lineout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Trent Grisham lines out to right fielder Jonny DeLuca.
+                            <span class="player-name-ref">Trent Grisham</span> lines out to right fielder Jonny DeLuca.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -799,7 +812,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Junior Caminero doubles (2) on a sharp line drive to center fielder Trent Grisham.
+                            <span class="player-name-ref">Junior Caminero</span> doubles (2) on a sharp line drive to center fielder Trent Grisham.
                             
                         </p>
 
@@ -829,12 +842,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Ben Williamson grounds out, second baseman Jazz Chisholm Jr. to first baseman Ben Rice. Junior Caminero to 3rd.
+                            <span class="player-name-ref">Ben Williamson</span> grounds out, second baseman Jazz Chisholm Jr. to first baseman Ben Rice. <span class="player-name-ref">Junior Caminero</span> to 3rd.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -871,14 +884,14 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jonny DeLuca singles on a fly ball to right fielder Aaron Judge. Junior Caminero scores.
+                            <span class="player-name-ref">Jonny DeLuca</span> singles on a fly ball to right fielder Aaron Judge. <span class="player-name-ref">Junior Caminero</span> scores.
                             
                         </p>
 
                         
                         <p class="mt-4 text-[17px] text-gray-900">
                             
-                            NYY 1, TB 1
+                            NYY 1, <span class="font-extrabold">TB 1</span>
                             
                         </p>
                         
@@ -907,12 +920,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Cedric Mullins flies out to center fielder Trent Grisham.
+                            <span class="player-name-ref">Cedric Mullins</span> flies out to center fielder Trent Grisham.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -944,12 +957,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Forceout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Nick Fortes grounds into a force out, shortstop José Caballero to second baseman Jazz Chisholm Jr. Jonny DeLuca out at 2nd.
+                            <span class="player-name-ref">Nick Fortes</span> grounds into a force out, shortstop José Caballero to second baseman Jazz Chisholm Jr. <span class="player-name-ref">Jonny DeLuca</span> out at 2nd.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -989,12 +1002,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Pop Out
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Aaron Judge pops out to shortstop Taylor Walls.
+                            <span class="player-name-ref">Aaron Judge</span> pops out to shortstop Taylor Walls.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -1026,12 +1039,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Pop Out
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Cody Bellinger pops out to shortstop Taylor Walls.
+                            <span class="player-name-ref">Cody Bellinger</span> pops out to shortstop Taylor Walls.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -1068,7 +1081,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Ben Rice doubles (5) on a sharp line drive to left fielder Ryan Vilade, deflected by center fielder Cedric Mullins.
+                            <span class="player-name-ref">Ben Rice</span> doubles (5) on a sharp line drive to left fielder Ryan Vilade, deflected by center fielder Cedric Mullins.
                             
                         </p>
 
@@ -1098,12 +1111,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Giancarlo Stanton flies out sharply to left fielder Ryan Vilade.
+                            <span class="player-name-ref">Giancarlo Stanton</span> flies out sharply to left fielder Ryan Vilade.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -1143,12 +1156,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Taylor Walls challenged (pitch result), call on the field was confirmed: Taylor Walls called out on strikes.
+                            <span class="player-name-ref">Taylor Walls</span> challenged (pitch result), call on the field was confirmed: <span class="player-name-ref">Taylor Walls</span> called out on strikes.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -1180,12 +1193,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Yandy Díaz grounds out, second baseman Jazz Chisholm Jr. to first baseman Ben Rice.
+                            <span class="player-name-ref">Yandy Díaz</span> grounds out, second baseman Jazz Chisholm Jr. to first baseman Ben Rice.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -1217,12 +1230,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Ryan Vilade flies out to left fielder Cody Bellinger.
+                            <span class="player-name-ref">Ryan Vilade</span> flies out to left fielder Cody Bellinger.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -1262,12 +1275,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jazz Chisholm Jr. flies out to left fielder Ryan Vilade.
+                            <span class="player-name-ref">Jazz Chisholm Jr.</span> flies out to left fielder Ryan Vilade.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -1299,12 +1312,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Austin Wells strikes out on a foul tip.
+                            <span class="player-name-ref">Austin Wells</span> strikes out on a foul tip.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -1336,12 +1349,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            José Caballero flies out to center fielder Cedric Mullins.
+                            <span class="player-name-ref">José Caballero</span> flies out to center fielder Cedric Mullins.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -1381,12 +1394,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jonathan Aranda flies out to left fielder Cody Bellinger.
+                            <span class="player-name-ref">Jonathan Aranda</span> flies out to left fielder Cody Bellinger.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -1418,12 +1431,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Junior Caminero grounds out, second baseman Jazz Chisholm Jr. to first baseman Ben Rice.
+                            <span class="player-name-ref">Junior Caminero</span> grounds out, second baseman Jazz Chisholm Jr. to first baseman Ben Rice.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -1455,12 +1468,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Ben Williamson called out on strikes.
+                            <span class="player-name-ref">Ben Williamson</span> called out on strikes.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -1500,12 +1513,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Ryan McMahon flies out to right fielder Jonny DeLuca.
+                            <span class="player-name-ref">Ryan McMahon</span> flies out to right fielder Jonny DeLuca.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -1542,7 +1555,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Trent Grisham walks.
+                            <span class="player-name-ref">Trent Grisham</span> walks.
                             
                         </p>
 
@@ -1572,12 +1585,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Aaron Judge flies out to center fielder Cedric Mullins.
+                            <span class="player-name-ref">Aaron Judge</span> flies out to center fielder Cedric Mullins.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -1614,7 +1627,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Cody Bellinger singles on a ground ball to left fielder Ryan Vilade. Trent Grisham to 2nd.
+                            <span class="player-name-ref">Cody Bellinger</span> singles on a ground ball to left fielder Ryan Vilade. <span class="player-name-ref">Trent Grisham</span> to 2nd.
                             
                         </p>
 
@@ -1649,7 +1662,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Ben Rice walks. Trent Grisham to 3rd. Cody Bellinger to 2nd.
+                            <span class="player-name-ref">Ben Rice</span> walks. <span class="player-name-ref">Trent Grisham</span> to 3rd. <span class="player-name-ref">Cody Bellinger</span> to 2nd.
                             
                         </p>
 
@@ -1669,10 +1682,12 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">Pitching Substitution</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Pitching Change: Kevin Kelly replaces Nick Martinez.
+                            Pitching Change: <span class="player-name-ref">Kevin Kelly</span> replaces Nick Martinez.
                             
                         </p>
+                        
                     </div>
                 </div>
                 
@@ -1698,12 +1713,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Giancarlo Stanton strikes out swinging.
+                            <span class="player-name-ref">Giancarlo Stanton</span> strikes out swinging.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -1743,12 +1758,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jonny DeLuca grounds out, second baseman Jazz Chisholm Jr. to first baseman Ben Rice.
+                            <span class="player-name-ref">Jonny DeLuca</span> grounds out, second baseman Jazz Chisholm Jr. to first baseman Ben Rice.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -1780,12 +1795,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Cedric Mullins strikes out swinging.
+                            <span class="player-name-ref">Cedric Mullins</span> strikes out swinging.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -1817,12 +1832,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Pop Out
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Nick Fortes pops out to second baseman Jazz Chisholm Jr.
+                            <span class="player-name-ref">Nick Fortes</span> pops out to second baseman Jazz Chisholm Jr.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -1852,10 +1867,12 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">Pitching Substitution</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Pitching Change: Ian Seymour replaces Kevin Kelly.
+                            Pitching Change: <span class="player-name-ref">Ian Seymour</span> replaces Kevin Kelly.
                             
                         </p>
+                        
                     </div>
                 </div>
                 
@@ -1881,12 +1898,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jazz Chisholm Jr. strikes out swinging.
+                            <span class="player-name-ref">Jazz Chisholm Jr.</span> strikes out swinging.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -1918,12 +1935,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Austin Wells grounds out, second baseman Ben Williamson to first baseman Jonathan Aranda.
+                            <span class="player-name-ref">Austin Wells</span> grounds out, second baseman Ben Williamson to first baseman Jonathan Aranda.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -1955,12 +1972,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            José Caballero called out on strikes.
+                            <span class="player-name-ref">José Caballero</span> called out on strikes.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -2005,7 +2022,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Taylor Walls singles on a ground ball to left fielder Cody Bellinger.
+                            <span class="player-name-ref">Taylor Walls</span> singles on a ground ball to left fielder Cody Bellinger.
                             
                         </p>
 
@@ -2035,12 +2052,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Yandy Díaz flies out sharply to left fielder Cody Bellinger.
+                            <span class="player-name-ref">Yandy Díaz</span> flies out sharply to left fielder Cody Bellinger.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -2077,7 +2094,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Ryan Vilade singles on a line drive to center fielder Trent Grisham. Taylor Walls to 3rd.
+                            <span class="player-name-ref">Ryan Vilade</span> singles on a line drive to center fielder Trent Grisham. <span class="player-name-ref">Taylor Walls</span> to 3rd.
                             
                         </p>
 
@@ -2112,7 +2129,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jonathan Aranda out on a sacrifice fly to left fielder Cody Bellinger. Taylor Walls scores.
+                            <span class="player-name-ref">Jonathan Aranda</span> out on a sacrifice fly to left fielder Cody Bellinger. <span class="player-name-ref">Taylor Walls</span> scores.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -2150,12 +2167,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Junior Caminero grounds out, third baseman Ryan McMahon to first baseman Ben Rice.
+                            <span class="player-name-ref">Junior Caminero</span> grounds out, third baseman Ryan McMahon to first baseman Ben Rice.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -2173,6 +2190,27 @@
             <h1 class="mb-8 border-t border-gray-100 pt-8 text-3xl font-extrabold">Top 7th</h1>
 
             <div class="flex flex-col gap-8">
+                
+                
+                <div class="flex items-start gap-4">
+                    <div class="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="w-6 h-6 text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9H5m0 0l3.5-3.5M5 9l3.5 3.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15h14m0 0l-3.5-3.5M19 15l-3.5 3.5" />
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col justify-center pt-0.5">
+                        <span class="mb-0.5 text-sm font-bold text-gray-500">Pinch Hitter</span>
+                        
+                        <p class="text-[17px] leading-snug">
+                            Offensive Substitution: Pinch-hitter <span class="player-name-ref">Amed Rosario</span> replaces Ryan McMahon.
+                            
+                        </p>
+                        
+                    </div>
+                </div>
+                
                 
                 
                 <div class="flex items-start gap-4">
@@ -2195,12 +2233,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Amed Rosario strikes out swinging.
+                            <span class="player-name-ref">Amed Rosario</span> strikes out swinging.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -2232,12 +2270,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Lineout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Trent Grisham lines out to center fielder Cedric Mullins.
+                            <span class="player-name-ref">Trent Grisham</span> lines out to center fielder Cedric Mullins.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -2259,10 +2297,12 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">Pitching Substitution</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Pitching Change: Griffin Jax replaces Ian Seymour.
+                            Pitching Change: <span class="player-name-ref">Griffin Jax</span> replaces Ian Seymour.
                             
                         </p>
+                        
                     </div>
                 </div>
                 
@@ -2293,7 +2333,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Aaron Judge walks.
+                            <span class="player-name-ref">Aaron Judge</span> walks.
                             
                         </p>
 
@@ -2323,12 +2363,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Cody Bellinger strikes out swinging.
+                            <span class="player-name-ref">Cody Bellinger</span> strikes out swinging.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -2346,6 +2386,27 @@
             <h1 class="mb-8 border-t border-gray-100 pt-8 text-3xl font-extrabold">Bottom 7th</h1>
 
             <div class="flex flex-col gap-8">
+                
+                
+                <div class="flex items-start gap-4">
+                    <div class="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="w-6 h-6 text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9H5m0 0l3.5-3.5M5 9l3.5 3.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15h14m0 0l-3.5-3.5M19 15l-3.5 3.5" />
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col justify-center pt-0.5">
+                        <span class="mb-0.5 text-sm font-bold text-gray-500">Defensive Switch</span>
+                        
+                        <p class="text-[17px] leading-snug">
+                            Amed Rosario remains in the game as the third baseman.
+                            
+                        </p>
+                        
+                    </div>
+                </div>
+                
                 
                 
                 <div class="flex items-start gap-4">
@@ -2368,12 +2429,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Ben Williamson grounds out, pitcher Max Fried to first baseman Ben Rice.
+                            <span class="player-name-ref">Ben Williamson</span> grounds out, pitcher <span class="player-name-ref">Max Fried</span> to first baseman Ben Rice.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -2405,12 +2466,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jonny DeLuca strikes out swinging.
+                            <span class="player-name-ref">Jonny DeLuca</span> strikes out swinging.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -2442,12 +2503,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Cedric Mullins grounds out, first baseman Ben Rice to pitcher Max Fried.
+                            <span class="player-name-ref">Cedric Mullins</span> grounds out, first baseman Ben Rice to pitcher <span class="player-name-ref">Max Fried</span>.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -2477,10 +2538,12 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">Pitching Substitution</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Pitching Change: Bryan Baker replaces Griffin Jax.
+                            Pitching Change: <span class="player-name-ref">Bryan Baker</span> replaces Griffin Jax.
                             
                         </p>
+                        
                     </div>
                 </div>
                 
@@ -2506,12 +2569,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Lineout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Ben Rice lines out to left fielder Ryan Vilade.
+                            <span class="player-name-ref">Ben Rice</span> lines out to left fielder Ryan Vilade.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -2548,10 +2611,31 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Giancarlo Stanton walks.
+                            <span class="player-name-ref">Giancarlo Stanton</span> walks.
                             
                         </p>
 
+                        
+                    </div>
+                </div>
+                
+                
+                
+                <div class="flex items-start gap-4">
+                    <div class="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="w-6 h-6 text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9H5m0 0l3.5-3.5M5 9l3.5 3.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15h14m0 0l-3.5-3.5M19 15l-3.5 3.5" />
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col justify-center pt-0.5">
+                        <span class="mb-0.5 text-sm font-bold text-gray-500">Pinch Runner</span>
+                        
+                        <p class="text-[17px] leading-snug">
+                            Offensive Substitution: Pinch-runner <span class="player-name-ref">Randal Grichuk</span> replaces Giancarlo Stanton.
+                            
+                        </p>
                         
                     </div>
                 </div>
@@ -2583,7 +2667,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jazz Chisholm Jr. doubles (4) on a ground ball to right fielder Jonny DeLuca. Randal Grichuk to 3rd.
+                            <span class="player-name-ref">Jazz Chisholm Jr.</span> doubles (4) on a ground ball to right fielder Jonny DeLuca. <span class="player-name-ref">Randal Grichuk</span> to 3rd.
                             
                         </p>
 
@@ -2613,12 +2697,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Austin Wells flies out to left fielder Ryan Vilade.
+                            <span class="player-name-ref">Austin Wells</span> flies out to left fielder Ryan Vilade.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -2655,7 +2739,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            José Caballero doubles (2) on a sharp line drive to left fielder Ryan Vilade. Randal Grichuk scores. Jazz Chisholm Jr. scores.
+                            <span class="player-name-ref">José Caballero</span> doubles (2) on a sharp line drive to left fielder Ryan Vilade. <span class="player-name-ref">Randal Grichuk</span> scores. <span class="player-name-ref">Jazz Chisholm Jr.</span> scores.
                             
                         </p>
 
@@ -2663,6 +2747,26 @@
                         <p class="mt-4 text-[17px] text-gray-900">
                             
                             <span class="font-extrabold">NYY 3</span>, TB 2
+                            
+                        </p>
+                        
+                    </div>
+                </div>
+                
+                
+                
+                <div class="flex items-start gap-4">
+                    <div class="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col justify-center pt-0.5">
+                        <span class="mb-0.5 text-sm font-bold text-gray-500">Balk</span>
+                        
+                        <p class="text-[17px] leading-snug">
+                            With <span class="player-name-ref">Amed Rosario</span> batting, <span class="player-name-ref">José Caballero</span> advances to 3rd on a balk.
                             
                         </p>
                         
@@ -2680,8 +2784,8 @@
                         
                         <div class="mb-2 flex items-center gap-2">
                             <svg width="22" viewBox="0 0 24 17.25" class="text-black">
-                                <rect fill="transparent" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(5.25, 7.25) rotate(-315)"></rect>
-                                <rect fill="currentColor" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(12, 0.75) rotate(-315)"></rect>
+                                <rect fill="currentColor" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(5.25, 7.25) rotate(-315)"></rect>
+                                <rect fill="transparent" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(12, 0.75) rotate(-315)"></rect>
                                 <rect fill="currentColor" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(18.75, 7.25) rotate(-315)"></rect>
                             </svg>
                             <span class="mt-0.5 text-sm font-semibold leading-none text-gray-900">2 Outs</span>
@@ -2691,12 +2795,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Amed Rosario flies out to center fielder Cedric Mullins.
+                            <span class="player-name-ref">Amed Rosario</span> flies out to center fielder Cedric Mullins.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -2714,6 +2818,27 @@
             <h1 class="mb-8 border-t border-gray-100 pt-8 text-3xl font-extrabold">Bottom 8th</h1>
 
             <div class="flex flex-col gap-8">
+                
+                
+                <div class="flex items-start gap-4">
+                    <div class="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="w-6 h-6 text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9H5m0 0l3.5-3.5M5 9l3.5 3.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15h14m0 0l-3.5-3.5M19 15l-3.5 3.5" />
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col justify-center pt-0.5">
+                        <span class="mb-0.5 text-sm font-bold text-gray-500">Defensive Switch</span>
+                        
+                        <p class="text-[17px] leading-snug">
+                            Randal Grichuk remains in the game as the designated hitter.
+                            
+                        </p>
+                        
+                    </div>
+                </div>
+                
                 
                 
                 <div class="flex items-start gap-4">
@@ -2741,10 +2866,31 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Nick Fortes doubles (4) on a line drive to center fielder Trent Grisham.
+                            <span class="player-name-ref">Nick Fortes</span> doubles (4) on a line drive to center fielder Trent Grisham.
                             
                         </p>
 
+                        
+                    </div>
+                </div>
+                
+                
+                
+                <div class="flex items-start gap-4">
+                    <div class="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="w-6 h-6 text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9H5m0 0l3.5-3.5M5 9l3.5 3.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15h14m0 0l-3.5-3.5M19 15l-3.5 3.5" />
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col justify-center pt-0.5">
+                        <span class="mb-0.5 text-sm font-bold text-gray-500">Pinch Runner</span>
+                        
+                        <p class="text-[17px] leading-snug">
+                            Offensive Substitution: Pinch-runner <span class="player-name-ref">Chandler Simpson</span> replaces Nick Fortes.
+                            
+                        </p>
                         
                     </div>
                 </div>
@@ -2776,7 +2922,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Taylor Walls out on a sacrifice bunt, pitcher Max Fried to first baseman Ben Rice. Chandler Simpson to 3rd.
+                            <span class="player-name-ref">Taylor Walls</span> out on a sacrifice bunt, pitcher <span class="player-name-ref">Max Fried</span> to first baseman Ben Rice. <span class="player-name-ref">Chandler Simpson</span> to 3rd.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -2813,14 +2959,14 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Yandy Díaz singles on a ground ball to first baseman Ben Rice. Chandler Simpson scores.
+                            <span class="player-name-ref">Yandy Díaz</span> singles on a ground ball to first baseman Ben Rice. <span class="player-name-ref">Chandler Simpson</span> scores.
                             
                         </p>
 
                         
                         <p class="mt-4 text-[17px] text-gray-900">
                             
-                            NYY 3, TB 3
+                            NYY 3, <span class="font-extrabold">TB 3</span>
                             
                         </p>
                         
@@ -2849,12 +2995,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Lineout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Ryan Vilade lines out to center fielder Trent Grisham.
+                            <span class="player-name-ref">Ryan Vilade</span> lines out to center fielder Trent Grisham.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -2886,12 +3032,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jonathan Aranda strikes out swinging.
+                            <span class="player-name-ref">Jonathan Aranda</span> strikes out swinging.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -2920,11 +3066,55 @@
                     </div>
 
                     <div class="flex flex-col justify-center pt-0.5">
-                        <span class="mb-0.5 text-sm font-bold text-gray-500">Pitching Substitution</span>
+                        <span class="mb-0.5 text-sm font-bold text-gray-500">Defensive Substitution</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Pitching Change: Hunter Bigge replaces Bryan Baker.
+                            Defensive Substitution: Hunter Feduccia replaces left fielder Ryan Vilade, batting 2nd, playing catcher.
                             
                         </p>
+                        
+                    </div>
+                </div>
+                
+                
+                
+                <div class="flex items-start gap-4">
+                    <div class="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="w-6 h-6 text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9H5m0 0l3.5-3.5M5 9l3.5 3.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15h14m0 0l-3.5-3.5M19 15l-3.5 3.5" />
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col justify-center pt-0.5">
+                        <span class="mb-0.5 text-sm font-bold text-gray-500">Defensive Switch</span>
+                        
+                        <p class="text-[17px] leading-snug">
+                            Chandler Simpson remains in the game as the left fielder.
+                            
+                        </p>
+                        
+                    </div>
+                </div>
+                
+                
+                
+                <div class="flex items-start gap-4">
+                    <div class="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="w-6 h-6 text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9H5m0 0l3.5-3.5M5 9l3.5 3.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15h14m0 0l-3.5-3.5M19 15l-3.5 3.5" />
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col justify-center pt-0.5">
+                        <span class="mb-0.5 text-sm font-bold text-gray-500">Pitching Substitution</span>
+                        
+                        <p class="text-[17px] leading-snug">
+                            Pitching Change: <span class="player-name-ref">Hunter Bigge</span> replaces Bryan Baker.
+                            
+                        </p>
+                        
                     </div>
                 </div>
                 
@@ -2950,12 +3140,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Trent Grisham grounds out, shortstop Taylor Walls to first baseman Jonathan Aranda.
+                            <span class="player-name-ref">Trent Grisham</span> grounds out, shortstop Taylor Walls to first baseman Jonathan Aranda.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -2992,7 +3182,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Aaron Judge walks.
+                            <span class="player-name-ref">Aaron Judge</span> walks.
                             
                         </p>
 
@@ -3013,10 +3203,12 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">Stolen Base</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Aaron Judge steals (3) 2nd base.
+                            <span class="player-name-ref">Aaron Judge</span> steals (3) 2nd base.
                             
                         </p>
+                        
                     </div>
                 </div>
                 
@@ -3042,12 +3234,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Cody Bellinger flies out sharply to center fielder Cedric Mullins. Aaron Judge to 3rd.
+                            <span class="player-name-ref">Cody Bellinger</span> flies out sharply to center fielder Cedric Mullins. <span class="player-name-ref">Aaron Judge</span> to 3rd.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -3084,7 +3276,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Hunter Bigge intentionally walks Ben Rice.
+                            <span class="player-name-ref">Hunter Bigge</span> intentionally walks <span class="player-name-ref">Ben Rice</span>.
                             
                         </p>
 
@@ -3114,12 +3306,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Randal Grichuk flies out to center fielder Cedric Mullins.
+                            <span class="player-name-ref">Randal Grichuk</span> flies out to center fielder Cedric Mullins.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -3149,10 +3341,12 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">Pitching Substitution</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Pitching Change: Fernando Cruz replaces Max Fried.
+                            Pitching Change: <span class="player-name-ref">Fernando Cruz</span> replaces Max Fried.
                             
                         </p>
+                        
                     </div>
                 </div>
                 
@@ -3178,12 +3372,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Junior Caminero strikes out swinging.
+                            <span class="player-name-ref">Junior Caminero</span> strikes out swinging.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -3215,12 +3409,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Ben Williamson flies out to right fielder Aaron Judge.
+                            <span class="player-name-ref">Ben Williamson</span> flies out to right fielder Aaron Judge.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -3257,7 +3451,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jonny DeLuca singles on a line drive to center fielder Trent Grisham.
+                            <span class="player-name-ref">Jonny DeLuca</span> singles on a line drive to center fielder Trent Grisham.
                             
                         </p>
 
@@ -3277,10 +3471,12 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">Pitching Substitution</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Pitching Change: Tim Hill replaces Fernando Cruz.
+                            Pitching Change: <span class="player-name-ref">Tim Hill</span> replaces Fernando Cruz.
                             
                         </p>
+                        
                     </div>
                 </div>
                 
@@ -3306,12 +3502,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Flyout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Cedric Mullins flies out to left fielder Cody Bellinger.
+                            <span class="player-name-ref">Cedric Mullins</span> flies out to left fielder Cody Bellinger.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -3341,10 +3537,32 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">Pitching Substitution</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Pitching Change: Cole Sulser replaces Hunter Bigge.
+                            Pitching Change: <span class="player-name-ref">Cole Sulser</span> replaces Hunter Bigge.
                             
                         </p>
+                        
+                    </div>
+                </div>
+                
+                
+                
+                <div class="flex items-start gap-4">
+                    <div class="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col justify-center pt-0.5">
+                        <span class="mb-0.5 text-sm font-bold text-gray-500">Runner Placed On Base</span>
+                        
+                        <p class="text-[17px] leading-snug">
+                            <span class="player-name-ref">Randal Grichuk</span> starts inning at 2nd base.
+                            
+                        </p>
+                        
                     </div>
                 </div>
                 
@@ -3360,7 +3578,7 @@
                         <div class="mb-2 flex items-center gap-2">
                             <svg width="22" viewBox="0 0 24 17.25" class="text-black">
                                 <rect fill="transparent" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(5.25, 7.25) rotate(-315)"></rect>
-                                <rect fill="transparent" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(12, 0.75) rotate(-315)"></rect>
+                                <rect fill="currentColor" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(12, 0.75) rotate(-315)"></rect>
                                 <rect fill="transparent" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(18.75, 7.25) rotate(-315)"></rect>
                             </svg>
                             <span class="mt-0.5 text-sm font-semibold leading-none text-gray-900">0 Outs</span>
@@ -3370,12 +3588,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Pop Out
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jazz Chisholm Jr. pops out to shortstop Taylor Walls.
+                            <span class="player-name-ref">Jazz Chisholm Jr.</span> pops out to shortstop Taylor Walls.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -3397,7 +3615,7 @@
                         <div class="mb-2 flex items-center gap-2">
                             <svg width="22" viewBox="0 0 24 17.25" class="text-black">
                                 <rect fill="transparent" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(5.25, 7.25) rotate(-315)"></rect>
-                                <rect fill="transparent" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(12, 0.75) rotate(-315)"></rect>
+                                <rect fill="currentColor" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(12, 0.75) rotate(-315)"></rect>
                                 <rect fill="transparent" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(18.75, 7.25) rotate(-315)"></rect>
                             </svg>
                             <span class="mt-0.5 text-sm font-semibold leading-none text-gray-900">1 Out</span>
@@ -3407,12 +3625,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Austin Wells grounds out to first baseman Jonathan Aranda. Randal Grichuk to 3rd.
+                            <span class="player-name-ref">Austin Wells</span> grounds out to first baseman Jonathan Aranda. <span class="player-name-ref">Randal Grichuk</span> to 3rd.
                             
                             <span class="font-bold">2 outs</span>
                             
@@ -3449,7 +3667,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            José Caballero singles on a ground ball to center fielder Cedric Mullins. Randal Grichuk scores.
+                            <span class="player-name-ref">José Caballero</span> singles on a ground ball to center fielder Cedric Mullins. <span class="player-name-ref">Randal Grichuk</span> scores.
                             
                         </p>
 
@@ -3485,12 +3703,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Groundout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Amed Rosario grounds out to pitcher Cole Sulser.
+                            <span class="player-name-ref">Amed Rosario</span> grounds out to pitcher <span class="player-name-ref">Cole Sulser</span>.
                             
                             <span class="font-bold">3 outs</span>
                             
@@ -3520,10 +3738,32 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">Pitching Substitution</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Pitching Change: David Bednar replaces Tim Hill.
+                            Pitching Change: <span class="player-name-ref">David Bednar</span> replaces Tim Hill.
                             
                         </p>
+                        
+                    </div>
+                </div>
+                
+                
+                
+                <div class="flex items-start gap-4">
+                    <div class="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col justify-center pt-0.5">
+                        <span class="mb-0.5 text-sm font-bold text-gray-500">Runner Placed On Base</span>
+                        
+                        <p class="text-[17px] leading-snug">
+                            <span class="player-name-ref">Cedric Mullins</span> starts inning at 2nd base.
+                            
+                        </p>
+                        
                     </div>
                 </div>
                 
@@ -3539,7 +3779,7 @@
                         <div class="mb-2 flex items-center gap-2">
                             <svg width="22" viewBox="0 0 24 17.25" class="text-black">
                                 <rect fill="transparent" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(5.25, 7.25) rotate(-315)"></rect>
-                                <rect fill="transparent" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(12, 0.75) rotate(-315)"></rect>
+                                <rect fill="currentColor" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(12, 0.75) rotate(-315)"></rect>
                                 <rect fill="transparent" stroke-width="1.5" stroke="currentColor" width="6" height="6" transform="translate(18.75, 7.25) rotate(-315)"></rect>
                             </svg>
                             <span class="mt-0.5 text-sm font-semibold leading-none text-gray-900">0 Outs</span>
@@ -3554,7 +3794,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Chandler Simpson singles on a soft bunt ground ball to third baseman Amed Rosario. Cedric Mullins to 3rd.
+                            <span class="player-name-ref">Chandler Simpson</span> singles on a soft bunt ground ball to third baseman Amed Rosario. <span class="player-name-ref">Cedric Mullins</span> to 3rd.
                             
                         </p>
 
@@ -3575,10 +3815,12 @@
 
                     <div class="flex flex-col justify-center pt-0.5">
                         <span class="mb-0.5 text-sm font-bold text-gray-500">Stolen Base</span>
+                        
                         <p class="text-[17px] leading-snug">
-                            Chandler Simpson steals (6) 2nd base.
+                            <span class="player-name-ref">Chandler Simpson</span> steals (6) 2nd base.
                             
                         </p>
+                        
                     </div>
                 </div>
                 
@@ -3609,14 +3851,14 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Taylor Walls singles on a soft bunt ground ball to pitcher David Bednar. Cedric Mullins scores. Chandler Simpson to 3rd.
+                            <span class="player-name-ref">Taylor Walls</span> singles on a soft bunt ground ball to pitcher <span class="player-name-ref">David Bednar</span>. <span class="player-name-ref">Cedric Mullins</span> scores. <span class="player-name-ref">Chandler Simpson</span> to 3rd.
                             
                         </p>
 
                         
                         <p class="mt-4 text-[17px] text-gray-900">
                             
-                            NYY 4, TB 4
+                            NYY 4, <span class="font-extrabold">TB 4</span>
                             
                         </p>
                         
@@ -3650,7 +3892,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            David Bednar intentionally walks Yandy Díaz. Taylor Walls to 2nd.
+                            <span class="player-name-ref">David Bednar</span> intentionally walks <span class="player-name-ref">Yandy Díaz</span>. <span class="player-name-ref">Taylor Walls</span> to 2nd.
                             
                         </p>
 
@@ -3680,12 +3922,12 @@
                         </div>
                         
 
-                        <span class="badge-blue mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
+                        <span class="badge-red mb-1.5 inline-flex rounded-full border px-3 py-0.5 text-[13px] font-semibold">
                             Strikeout
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Hunter Feduccia strikes out swinging.
+                            <span class="player-name-ref">Hunter Feduccia</span> strikes out swinging.
                             
                             <span class="font-bold">1 out</span>
                             
@@ -3722,7 +3964,7 @@
                         </span>
 
                         <p class="text-[17px] leading-snug text-gray-900">
-                            Jonathan Aranda reaches on a fielder's choice, fielded by second baseman Jazz Chisholm Jr. Chandler Simpson scores. Taylor Walls to 3rd. Yandy Díaz to 2nd.
+                            <span class="player-name-ref">Jonathan Aranda</span> reaches on a fielder&#x27;s choice, fielded by second baseman Jazz Chisholm Jr. <span class="player-name-ref">Chandler Simpson</span> scores. <span class="player-name-ref">Taylor Walls</span> to 3rd. <span class="player-name-ref">Yandy Díaz</span> to 2nd.
                             
                         </p>
 
