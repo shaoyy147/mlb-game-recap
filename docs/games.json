@@ -85,6 +85,23 @@
     "final_score": "BOS 9 - 3 STL"
   },
   {
+    "game_pk": 824126,
+    "official_date": "2026-04-12",
+    "game_datetime": "2026-04-12T18:10:00Z",
+    "away_label": "CWS",
+    "home_label": "KC",
+    "away_name": "Chicago White Sox",
+    "home_name": "Kansas City Royals",
+    "away_score": 6,
+    "home_score": 5,
+    "venue_name": "Kauffman Stadium",
+    "away_starting_pitcher": "Taylor, G",
+    "home_starting_pitcher": "Cameron, N",
+    "html_path": "games/2026-04-12-cws-at-kc-824126.html",
+    "title": "CWS @ KC",
+    "final_score": "CWS 6 - 5 KC"
+  },
+  {
     "game_pk": 823804,
     "official_date": "2026-04-12",
     "game_datetime": "2026-04-12T18:10:00Z",
