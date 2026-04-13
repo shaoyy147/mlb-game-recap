@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 824938,
+    "official_date": "2026-04-12",
+    "game_datetime": "2026-04-12T23:20:00Z",
+    "away_label": "CLE",
+    "home_label": "ATL",
+    "away_name": "Cleveland Guardians",
+    "home_name": "Atlanta Braves",
+    "away_score": 1,
+    "home_score": 13,
+    "venue_name": "Truist Park",
+    "away_starting_pitcher": "Bibee, T",
+    "home_starting_pitcher": "Sale, C",
+    "html_path": "games/2026-04-12-cle-at-atl-824938.html",
+    "title": "CLE @ ATL",
+    "final_score": "CLE 1 - 13 ATL"
+  },
+  {
     "game_pk": 823966,
     "official_date": "2026-04-12",
     "game_datetime": "2026-04-12T20:10:00Z",
