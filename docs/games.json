@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 824530,
+    "official_date": "2026-04-16",
+    "game_datetime": "2026-04-16T16:40:00Z",
+    "away_label": "SF",
+    "home_label": "CIN",
+    "away_name": "San Francisco Giants",
+    "home_name": "Cincinnati Reds",
+    "away_score": 3,
+    "home_score": 0,
+    "venue_name": "Great American Ball Park",
+    "away_starting_pitcher": "Roupp, L",
+    "home_starting_pitcher": "Burns, C",
+    "html_path": "games/2026-04-16-sf-at-cin-824530.html",
+    "title": "SF @ CIN",
+    "final_score": "SF 3 - 0 CIN"
+  },
+  {
     "game_pk": 823963,
     "official_date": "2026-04-15",
     "game_datetime": "2026-04-16T02:10:00Z",
@@ -3026,23 +3043,6 @@
     "final_score": "TOR 4 - 5 CWS"
   },
   {
-    "game_pk": 824621,
-    "official_date": "2026-04-03",
-    "game_datetime": "2026-04-03T18:10:00Z",
-    "away_label": "TOR",
-    "home_label": "CWS",
-    "away_name": "Toronto Blue Jays",
-    "home_name": "Chicago White Sox",
-    "away_score": 4,
-    "home_score": 5,
-    "venue_name": "Rate Field",
-    "away_starting_pitcher": "Cease, D",
-    "home_starting_pitcher": "Taylor, G",
-    "html_path": "games/2026-04-03-tor-at-cws-824621.html",
-    "title": "TOR @ CWS",
-    "final_score": "TOR 4 - 5 CWS"
-  },
-  {
     "game_pk": 823568,
     "official_date": "2026-04-03",
     "game_datetime": "2026-04-03T17:35:00Z",
@@ -3092,56 +3092,5 @@
     "html_path": "games/2026-04-03-lad-at-wsh-822758.html",
     "title": "LAD @ WSH",
     "final_score": "LAD 13 - 6 WSH"
-  },
-  {
-    "game_pk": 823242,
-    "official_date": "2026-04-02",
-    "game_datetime": "2026-04-03T01:45:00Z",
-    "away_label": "NYM",
-    "home_label": "SF",
-    "away_name": "New York Mets",
-    "home_name": "San Francisco Giants",
-    "away_score": 2,
-    "home_score": 7,
-    "venue_name": "Oracle Park",
-    "away_starting_pitcher": "Peterson, D",
-    "home_starting_pitcher": "Ray, R",
-    "html_path": "games/2026-04-02-nym-at-sf-823242.html",
-    "title": "NYM @ SF",
-    "final_score": "NYM 2 - 7 SF"
-  },
-  {
-    "game_pk": 825105,
-    "official_date": "2026-04-02",
-    "game_datetime": "2026-04-03T01:40:00Z",
-    "away_label": "ATL",
-    "home_label": "AZ",
-    "away_name": "Atlanta Braves",
-    "home_name": "Arizona Diamondbacks",
-    "away_score": 17,
-    "home_score": 2,
-    "venue_name": "Chase Field",
-    "away_starting_pitcher": "López, R",
-    "home_starting_pitcher": "Nelson, R",
-    "html_path": "games/2026-04-02-atl-at-az-825105.html",
-    "title": "ATL @ AZ",
-    "final_score": "ATL 17 - 2 AZ"
-  },
-  {
-    "game_pk": 824133,
-    "official_date": "2026-04-02",
-    "game_datetime": "2026-04-02T18:10:00Z",
-    "away_label": "MIN",
-    "home_label": "KC",
-    "away_name": "Minnesota Twins",
-    "home_name": "Kansas City Royals",
-    "away_score": 5,
-    "home_score": 1,
-    "venue_name": "Kauffman Stadium",
-    "away_starting_pitcher": "Bradley, T",
-    "home_starting_pitcher": "Ragans, C",
-    "html_path": "games/2026-04-02-min-at-kc-824133.html",
-    "title": "MIN @ KC",
-    "final_score": "MIN 5 - 1 KC"
   }
 ]
