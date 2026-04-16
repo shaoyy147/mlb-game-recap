@@ -17,6 +17,23 @@
     "final_score": "TOR 1 - 2 MIL"
   },
   {
+    "game_pk": 823560,
+    "official_date": "2026-04-16",
+    "game_datetime": "2026-04-16T17:35:00Z",
+    "away_label": "LAA",
+    "home_label": "NYY",
+    "away_name": "Los Angeles Angels",
+    "home_name": "New York Yankees",
+    "away_score": 11,
+    "home_score": 4,
+    "venue_name": "Yankee Stadium",
+    "away_starting_pitcher": "Suter, B",
+    "home_starting_pitcher": "Fried, M",
+    "html_path": "games/2026-04-16-laa-at-nyy-823560.html",
+    "title": "LAA @ NYY",
+    "final_score": "LAA 11 - 4 NYY"
+  },
+  {
     "game_pk": 824530,
     "official_date": "2026-04-16",
     "game_datetime": "2026-04-16T16:40:00Z",
