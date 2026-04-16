@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 825023,
+    "official_date": "2026-04-16",
+    "game_datetime": "2026-04-16T19:05:00Z",
+    "away_label": "TEX",
+    "home_label": "ATH",
+    "away_name": "Texas Rangers",
+    "home_name": "Athletics",
+    "away_score": 9,
+    "home_score": 6,
+    "venue_name": "Sutter Health Park",
+    "away_starting_pitcher": "Leiter, J",
+    "home_starting_pitcher": "Lopez, J",
+    "html_path": "games/2026-04-16-tex-at-ath-825023.html",
+    "title": "TEX @ ATH",
+    "final_score": "TEX 9 - 6 ATH"
+  },
+  {
     "game_pk": 824614,
     "official_date": "2026-04-16",
     "game_datetime": "2026-04-16T18:10:00Z",
@@ -49,6 +66,23 @@
     "html_path": "games/2026-04-16-laa-at-nyy-823560.html",
     "title": "LAA @ NYY",
     "final_score": "LAA 11 - 4 NYY"
+  },
+  {
+    "game_pk": 824289,
+    "official_date": "2026-04-16",
+    "game_datetime": "2026-04-16T17:10:00Z",
+    "away_label": "KC",
+    "home_label": "DET",
+    "away_name": "Kansas City Royals",
+    "home_name": "Detroit Tigers",
+    "away_score": 9,
+    "home_score": 10,
+    "venue_name": "Comerica Park",
+    "away_starting_pitcher": "Bubic, K",
+    "home_starting_pitcher": "Montero, K",
+    "html_path": "games/2026-04-16-kc-at-det-824289.html",
+    "title": "KC @ DET",
+    "final_score": "KC 9 - 10 DET"
   },
   {
     "game_pk": 824530,
