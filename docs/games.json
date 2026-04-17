@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 824453,
+    "official_date": "2026-04-16",
+    "game_datetime": "2026-04-16T22:10:00Z",
+    "away_label": "BAL",
+    "home_label": "CLE",
+    "away_name": "Baltimore Orioles",
+    "home_name": "Cleveland Guardians",
+    "away_score": 2,
+    "home_score": 4,
+    "venue_name": "Progressive Field",
+    "away_starting_pitcher": "Baz, S",
+    "home_starting_pitcher": "Messick, P",
+    "html_path": "games/2026-04-16-bal-at-cle-824453.html",
+    "title": "BAL @ CLE",
+    "final_score": "BAL 2 - 4 CLE"
+  },
+  {
     "game_pk": 825023,
     "official_date": "2026-04-16",
     "game_datetime": "2026-04-16T19:05:00Z",
