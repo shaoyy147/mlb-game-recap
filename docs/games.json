@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 824371,
+    "official_date": "2026-04-19",
+    "game_datetime": "2026-04-19T19:10:00Z",
+    "away_label": "LAD",
+    "home_label": "COL",
+    "away_name": "Los Angeles Dodgers",
+    "home_name": "Colorado Rockies",
+    "away_score": 6,
+    "home_score": 9,
+    "venue_name": "Coors Field",
+    "away_starting_pitcher": "Sasaki, R",
+    "home_starting_pitcher": "Lorenzen, M",
+    "html_path": "games/2026-04-19-lad-at-col-824371.html",
+    "title": "LAD @ COL",
+    "final_score": "LAD 6 - 9 COL"
+  },
+  {
     "game_pk": 824691,
     "official_date": "2026-04-19",
     "game_datetime": "2026-04-19T18:20:00Z",
