@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 822750,
+    "official_date": "2026-04-19",
+    "game_datetime": "2026-04-19T17:35:00Z",
+    "away_label": "SF",
+    "home_label": "WSH",
+    "away_name": "San Francisco Giants",
+    "home_name": "Washington Nationals",
+    "away_score": 0,
+    "home_score": 3,
+    "venue_name": "Nationals Park",
+    "away_starting_pitcher": "Ray, R",
+    "home_starting_pitcher": "Poulin, P",
+    "html_path": "games/2026-04-19-sf-at-wsh-822750.html",
+    "title": "SF @ WSH",
+    "final_score": "SF 0 - 3 WSH"
+  },
+  {
     "game_pk": 824049,
     "official_date": "2026-04-18",
     "game_datetime": "2026-04-19T01:38:00Z",
