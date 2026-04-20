@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 824776,
+    "official_date": "2026-04-20",
+    "game_datetime": "2026-04-20T15:10:00Z",
+    "away_label": "DET",
+    "home_label": "BOS",
+    "away_name": "Detroit Tigers",
+    "home_name": "Boston Red Sox",
+    "away_score": 6,
+    "home_score": 8,
+    "venue_name": "Fenway Park",
+    "away_starting_pitcher": "Flaherty, J",
+    "home_starting_pitcher": "Gray, S",
+    "html_path": "games/2026-04-20-det-at-bos-824776.html",
+    "title": "DET @ BOS",
+    "final_score": "DET 6 - 8 BOS"
+  },
+  {
     "game_pk": 823475,
     "official_date": "2026-04-19",
     "game_datetime": "2026-04-19T23:20:00Z",
