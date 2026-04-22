@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 824123,
+    "official_date": "2026-04-22",
+    "game_datetime": "2026-04-22T18:10:00Z",
+    "away_label": "BAL",
+    "home_label": "KC",
+    "away_name": "Baltimore Orioles",
+    "home_name": "Kansas City Royals",
+    "away_score": 8,
+    "home_score": 6,
+    "venue_name": "Kauffman Stadium",
+    "away_starting_pitcher": "Bassitt, C",
+    "home_starting_pitcher": "Wacha, M",
+    "html_path": "games/2026-04-22-bal-at-kc-824123.html",
+    "title": "BAL @ KC",
+    "final_score": "BAL 8 - 6 KC"
+  },
+  {
     "game_pk": 824449,
     "official_date": "2026-04-22",
     "game_datetime": "2026-04-22T17:10:00Z",
