@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 824448,
+    "official_date": "2026-04-21",
+    "game_datetime": "2026-04-21T22:10:00Z",
+    "away_label": "HOU",
+    "home_label": "CLE",
+    "away_name": "Houston Astros",
+    "home_name": "Cleveland Guardians",
+    "away_score": 5,
+    "home_score": 8,
+    "venue_name": "Progressive Field",
+    "away_starting_pitcher": "Weiss, R",
+    "home_starting_pitcher": "Messick, P",
+    "html_path": "games/2026-04-21-hou-at-cle-824448.html",
+    "title": "HOU @ CLE",
+    "final_score": "HOU 5 - 8 CLE"
+  },
+  {
     "game_pk": 823149,
     "official_date": "2026-04-20",
     "game_datetime": "2026-04-21T01:40:00Z",
