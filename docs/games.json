@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 824288,
+    "official_date": "2026-04-23",
+    "game_datetime": "2026-04-23T17:10:00Z",
+    "away_label": "MIL",
+    "home_label": "DET",
+    "away_name": "Milwaukee Brewers",
+    "home_name": "Detroit Tigers",
+    "away_score": 4,
+    "home_score": 5,
+    "venue_name": "Comerica Park",
+    "away_starting_pitcher": "Sproat, B",
+    "home_starting_pitcher": "Skubal, T",
+    "html_path": "games/2026-04-23-mil-at-det-824288.html",
+    "title": "MIL @ DET",
+    "final_score": "MIL 4 - 5 DET"
+  },
+  {
     "game_pk": 822745,
     "official_date": "2026-04-23",
     "game_datetime": "2026-04-23T17:05:00Z",
