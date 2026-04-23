@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 822745,
+    "official_date": "2026-04-23",
+    "game_datetime": "2026-04-23T17:05:00Z",
+    "away_label": "ATL",
+    "home_label": "WSH",
+    "away_name": "Atlanta Braves",
+    "home_name": "Washington Nationals",
+    "away_score": 7,
+    "home_score": 2,
+    "venue_name": "Nationals Park",
+    "away_starting_pitcher": "Ritchie, J",
+    "home_starting_pitcher": "Cavalli, C",
+    "html_path": "games/2026-04-23-atl-at-wsh-822745.html",
+    "title": "ATL @ WSH",
+    "final_score": "ATL 7 - 2 WSH"
+  },
+  {
     "game_pk": 823231,
     "official_date": "2026-04-22",
     "game_datetime": "2026-04-23T01:45:00Z",
