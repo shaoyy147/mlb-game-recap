@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 824770,
+    "official_date": "2026-04-23",
+    "game_datetime": "2026-04-23T22:10:00Z",
+    "away_label": "NYY",
+    "home_label": "BOS",
+    "away_name": "New York Yankees",
+    "home_name": "Boston Red Sox",
+    "away_score": 4,
+    "home_score": 2,
+    "venue_name": "Fenway Park",
+    "away_starting_pitcher": "Schlittler, C",
+    "home_starting_pitcher": "Tolle, P",
+    "html_path": "games/2026-04-23-nyy-at-bos-824770.html",
+    "title": "NYY @ BOS",
+    "final_score": "NYY 4 - 2 BOS"
+  },
+  {
     "game_pk": 823233,
     "official_date": "2026-04-23",
     "game_datetime": "2026-04-23T19:45:00Z",
