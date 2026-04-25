@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 824613,
+    "official_date": "2026-04-25",
+    "game_datetime": "2026-04-25T20:10:00Z",
+    "away_label": "WSH",
+    "home_label": "CWS",
+    "away_name": "Washington Nationals",
+    "home_name": "Chicago White Sox",
+    "away_score": 6,
+    "home_score": 3,
+    "venue_name": "Rate Field",
+    "away_starting_pitcher": "Irvin, J",
+    "home_starting_pitcher": "Schultz, N",
+    "html_path": "games/2026-04-25-wsh-at-cws-824613.html",
+    "title": "WSH @ CWS",
+    "final_score": "WSH 6 - 3 CWS"
+  },
+  {
     "game_pk": 822989,
     "official_date": "2026-04-25",
     "game_datetime": "2026-04-25T20:10:00Z",
