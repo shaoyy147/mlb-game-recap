@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 823959,
+    "official_date": "2026-04-26",
+    "game_datetime": "2026-04-26T20:10:00Z",
+    "away_label": "CHC",
+    "home_label": "LAD",
+    "away_name": "Chicago Cubs",
+    "home_name": "Los Angeles Dodgers",
+    "away_score": 0,
+    "home_score": 6,
+    "venue_name": "UNIQLO Field at Dodger Stadium",
+    "away_starting_pitcher": "Imanaga, S",
+    "home_starting_pitcher": "Wrobleski, J",
+    "html_path": "games/2026-04-26-chc-at-lad-823959.html",
+    "title": "CHC @ LAD",
+    "final_score": "CHC 0 - 6 LAD"
+  },
+  {
     "game_pk": 823230,
     "official_date": "2026-04-26",
     "game_datetime": "2026-04-26T20:05:00Z",
