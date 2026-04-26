@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 822911,
+    "official_date": "2026-04-26",
+    "game_datetime": "2026-04-26T18:35:00Z",
+    "away_label": "ATH",
+    "home_label": "TEX",
+    "away_name": "Athletics",
+    "home_name": "Texas Rangers",
+    "away_score": 2,
+    "home_score": 1,
+    "venue_name": "Globe Life Field",
+    "away_starting_pitcher": "Ginn, J",
+    "home_starting_pitcher": "Rocker, K",
+    "html_path": "games/2026-04-26-ath-at-tex-822911.html",
+    "title": "ATH @ TEX",
+    "final_score": "ATH 2 - 1 TEX"
+  },
+  {
     "game_pk": 823068,
     "official_date": "2026-04-26",
     "game_datetime": "2026-04-26T18:15:00Z",
