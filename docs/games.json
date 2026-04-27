@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 824122,
+    "official_date": "2026-04-26",
+    "game_datetime": "2026-04-26T20:10:00Z",
+    "away_label": "LAA",
+    "home_label": "KC",
+    "away_name": "Los Angeles Angels",
+    "home_name": "Kansas City Royals",
+    "away_score": 9,
+    "home_score": 11,
+    "venue_name": "Kauffman Stadium",
+    "away_starting_pitcher": "Detmers, R",
+    "home_starting_pitcher": "Lugo, S",
+    "html_path": "games/2026-04-26-laa-at-kc-824122.html",
+    "title": "LAA @ KC",
+    "final_score": "LAA 9 - 11 KC"
+  },
+  {
     "game_pk": 823959,
     "official_date": "2026-04-26",
     "game_datetime": "2026-04-26T20:10:00Z",
