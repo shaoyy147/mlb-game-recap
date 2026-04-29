@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 823312,
+    "official_date": "2026-04-29",
+    "game_datetime": "2026-04-29T20:10:00Z",
+    "away_label": "CHC",
+    "home_label": "SD",
+    "away_name": "Chicago Cubs",
+    "home_name": "San Diego Padres",
+    "away_score": 5,
+    "home_score": 4,
+    "venue_name": "Petco Park",
+    "away_starting_pitcher": "Taillon, J",
+    "home_starting_pitcher": "Waldron, M",
+    "html_path": "games/2026-04-29-chc-at-sd-823312.html",
+    "title": "CHC @ SD",
+    "final_score": "CHC 5 - 4 SD"
+  },
+  {
     "game_pk": 823958,
     "official_date": "2026-04-29",
     "game_datetime": "2026-04-29T19:10:00Z",
