@@ -17,6 +17,23 @@
     "final_score": "SF 0 - 0 PHI"
   },
   {
+    "game_pk": 825016,
+    "official_date": "2026-04-30",
+    "game_datetime": "2026-04-30T19:05:00Z",
+    "away_label": "KC",
+    "home_label": "ATH",
+    "away_name": "Kansas City Royals",
+    "home_name": "Athletics",
+    "away_score": 3,
+    "home_score": 6,
+    "venue_name": "Sutter Health Park",
+    "away_starting_pitcher": "Cameron, N",
+    "home_starting_pitcher": "Springs, J",
+    "html_path": "games/2026-04-30-kc-at-ath-825016.html",
+    "title": "KC @ ATH",
+    "final_score": "KC 3 - 6 ATH"
+  },
+  {
     "game_pk": 823795,
     "official_date": "2026-04-30",
     "game_datetime": "2026-04-30T17:40:00Z",
