@@ -85,6 +85,23 @@
     "final_score": "HOU 0 - 0 BAL"
   },
   {
+    "game_pk": 824850,
+    "official_date": "2026-04-30",
+    "game_datetime": "2026-04-30T16:40:00Z",
+    "away_label": "HOU",
+    "home_label": "BAL",
+    "away_name": "Houston Astros",
+    "home_name": "Baltimore Orioles",
+    "away_score": 0,
+    "home_score": 0,
+    "venue_name": "Oriole Park at Camden Yards",
+    "away_starting_pitcher": "",
+    "home_starting_pitcher": "Young, B",
+    "html_path": "games/2026-04-30-hou-at-bal-824850.html",
+    "title": "HOU @ BAL",
+    "final_score": "HOU 0 - 0 BAL"
+  },
+  {
     "game_pk": 824524,
     "official_date": "2026-04-30",
     "game_datetime": "2026-04-30T16:40:00Z",
