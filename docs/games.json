@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 824771,
+    "official_date": "2026-05-02",
+    "game_datetime": "2026-05-02T20:10:00Z",
+    "away_label": "HOU",
+    "home_label": "BOS",
+    "away_name": "Houston Astros",
+    "home_name": "Boston Red Sox",
+    "away_score": 6,
+    "home_score": 3,
+    "venue_name": "Fenway Park",
+    "away_starting_pitcher": "Arrighetti, S",
+    "home_starting_pitcher": "Early, C",
+    "html_path": "games/2026-05-02-hou-at-bos-824771.html",
+    "title": "HOU @ BOS",
+    "final_score": "HOU 6 - 3 BOS"
+  },
+  {
     "game_pk": 823876,
     "official_date": "2026-05-02",
     "game_datetime": "2026-05-02T20:10:00Z",
@@ -32,6 +49,23 @@
     "html_path": "games/2026-05-02-cle-at-ath-825014.html",
     "title": "CLE @ ATH",
     "final_score": "CLE 14 - 6 ATH"
+  },
+  {
+    "game_pk": 823388,
+    "official_date": "2026-05-02",
+    "game_datetime": "2026-05-02T20:05:00Z",
+    "away_label": "CIN",
+    "home_label": "PIT",
+    "away_name": "Cincinnati Reds",
+    "home_name": "Pittsburgh Pirates",
+    "away_score": 7,
+    "home_score": 17,
+    "venue_name": "PNC Park",
+    "away_starting_pitcher": "Lowder, R",
+    "home_starting_pitcher": "Mlodzinski, C",
+    "html_path": "games/2026-05-02-cin-at-pit-823388.html",
+    "title": "CIN @ PIT",
+    "final_score": "CIN 7 - 17 PIT"
   },
   {
     "game_pk": 822746,
