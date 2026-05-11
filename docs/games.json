@@ -51,6 +51,23 @@
     "final_score": "STL 2 - 3 SD"
   },
   {
+    "game_pk": 823221,
+    "official_date": "2026-05-10",
+    "game_datetime": "2026-05-10T20:05:00Z",
+    "away_label": "PIT",
+    "home_label": "SF",
+    "away_name": "Pittsburgh Pirates",
+    "home_name": "San Francisco Giants",
+    "away_score": 6,
+    "home_score": 7,
+    "venue_name": "Oracle Park",
+    "away_starting_pitcher": "Chandler, B",
+    "home_starting_pitcher": "Mahle, T",
+    "html_path": "games/2026-05-10-pit-at-sf-823221.html",
+    "title": "PIT @ SF",
+    "final_score": "PIT 6 - 7 SF"
+  },
+  {
     "game_pk": 822902,
     "official_date": "2026-05-10",
     "game_datetime": "2026-05-10T18:35:00Z",
