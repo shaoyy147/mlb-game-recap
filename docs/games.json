@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 824113,
+    "official_date": "2026-05-10",
+    "game_datetime": "2026-05-10T23:20:00Z",
+    "away_label": "DET",
+    "home_label": "KC",
+    "away_name": "Detroit Tigers",
+    "home_name": "Kansas City Royals",
+    "away_score": 6,
+    "home_score": 3,
+    "venue_name": "Kauffman Stadium",
+    "away_starting_pitcher": "Hanifee, B",
+    "home_starting_pitcher": "Cameron, N",
+    "html_path": "games/2026-05-10-det-at-kc-824113.html",
+    "title": "DET @ KC",
+    "final_score": "DET 6 - 3 KC"
+  },
+  {
     "game_pk": 825085,
     "official_date": "2026-05-10",
     "game_datetime": "2026-05-10T20:10:00Z",
