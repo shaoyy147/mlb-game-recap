@@ -1,5 +1,22 @@
 [
   {
+    "game_pk": 824763,
+    "official_date": "2026-05-13",
+    "game_datetime": "2026-05-13T22:45:00Z",
+    "away_label": "PHI",
+    "home_label": "BOS",
+    "away_name": "Philadelphia Phillies",
+    "home_name": "Boston Red Sox",
+    "away_score": 1,
+    "home_score": 3,
+    "venue_name": "Fenway Park",
+    "away_starting_pitcher": "Painter, A",
+    "home_starting_pitcher": "Gray, S",
+    "html_path": "games/2026-05-13-phi-at-bos-824763.html",
+    "title": "PHI @ BOS",
+    "final_score": "PHI 1 - 3 BOS"
+  },
+  {
     "game_pk": 824438,
     "official_date": "2026-05-13",
     "game_datetime": "2026-05-13T17:10:00Z",
